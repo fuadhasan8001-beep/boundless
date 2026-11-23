@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#131315;color:#e5e1e4;-webkit-font-smoothing:antialiased;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "error-container": "#93000a", "on-primary-container": "#447000", "secondary": "#cebdff", "tertiary-container": "#e5e2db", "on-primary-fixed": "#102000", "on-primary": "#1f3700", "on-secondary-container": "#bea8ff", "inverse-primary": "#406900", "surface-variant": "#353437", "on-error": "#690005", "on-secondary-fixed": "#21005e", "on-secondary": "#381385", "surface-container-lowest": "#0e0e10", "surface-container-high": "#2a2a2c", "surface-container-low": "#1c1b1d", "secondary-fixed": "#e8ddff", "on-tertiary": "#31312c", "secondary-fixed-dim": "#cebdff", "surface": "#131315", "primary-container": "#aff755", "on-tertiary-fixed-variant": "#474742", "tertiary": "#ffffff", "surface-container": "#201f21", "inverse-surface": "#e5e1e4", "on-tertiary-container": "#65645f", "background": "#131315", "on-surface-variant": "#c1cab1", "surface-dim": "#131315", "tertiary-fixed-dim": "#c9c6c0", "secondary-container": "#4f319c", "inverse-on-surface": "#313032", "outline-variant": "#424937", "on-secondary-fixed-variant": "#4f319c", "on-background": "#e5e1e4", "primary-fixed-dim": "#94da3a", "tertiary-fixed": "#e5e2db", "surface-container-highest": "#353437", "surface-bright": "#39393b", "on-error-container": "#ffdad6", "on-tertiary-fixed": "#1c1c18", "surface-tint": "#94da3a", "on-surface": "#e5e1e4", "outline": "#8c947d", "on-primary-fixed-variant": "#2f4f00", "primary": "#ffffff", "error": "#ffb4ab", "primary-fixed": "#aff755" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-2xl": "4rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "margin": "3rem", "space-md": "1rem", "margin-mobile": "1.25rem", "space-3xl": "6rem", "space-sm": "0.5rem", "gutter": "1.5rem", "space-lg": "1.5rem", "gutter-mobile": "1rem" }, fontFamily: { "headline-md": ["Space Grotesk"], "display": ["Space Grotesk"], "label-caps": ["JetBrains Mono"], "stat-lg": ["JetBrains Mono"], "body-md": ["Inter"], "display-mobile": ["Space Grotesk"], "body-lg": ["Inter"], "headline-lg": ["Space Grotesk"], "code": ["JetBrains Mono"], "headline-lg-mobile": ["Space Grotesk"], "body-sm": ["Inter"], "headline-sm": ["Space Grotesk"] }, fontSize: { "headline-md": ["2.25rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.025em", "fontWeight": "600" }], "display": ["5rem", { "lineHeight": "5rem", "letterSpacing": "-0.04em", "fontWeight": "700" }], "label-caps": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.08em", "fontWeight": "600" }], "stat-lg": ["2.5rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["0.9375rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "400" }], "display-mobile": ["3rem", { "lineHeight": "3.125rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.01em", "fontWeight": "400" }], "headline-lg": ["3.5rem", { "lineHeight": "3.75rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "code": ["0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "0em", "fontWeight": "500" }], "headline-lg-mobile": ["2.25rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.025em", "fontWeight": "700" }], "body-sm": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-sm": ["1.5rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.02em", "fontWeight": "600" }] } } } };</script><title>Portofolio Seluler — Konsep</title></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm"><button aria-label="Go back" class="min-w-[44px] min-h-[44px] -ml-2 flex items-center justify-center text-on-surface hover:text-primary-fixed transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[20px]">kembali</span></button><div class="flex flex-col"><span class="font-label-caps text-[10px] text-on-surface-variant uppercase tracking-widest leading-none">SPESIFIKASI // DETAIL</span><h1 class="font-headline-sm text-headline-sm tracking-tight text-on-surface leading-none mt-1 truncate max-w-[200px]">Direktori Kontak</h1></div></div><div class="flex items-center gap-space-xs"><button aria-label="Share project" class="min-w-[44px] min-h-[44px] flex items-center justify-center text-on-surface-variant hover:text-primary-fixed transition-colors"><span class="material-symbols-outlined text-[20px]">bagikan</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">orang</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface px-margin-mobile"><div class="flex flex-col w-full">
+<!-- SECTION 1: HERO -->
+<section class="flex flex-col gap-space-lg pt-space-md pb-space-2xl">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 bg-primary-fixed"></span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">
+          LAB Siswa INDEPENDEN · 2024
+        </span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight uppercase mt-space-xs">
+        KAMI MEMBANGUN HAL YANG BERARTI.
+      </h1>
+<p class="font-body-md text-body-md text-on-surface/80 mt-space-xs">
+        Tim Siswa yang mengeksplorasi teknologi, desain, dan gagasan melalui proyek nyata dan kolaborasi di luar kelas.
+      </p>
+</div>
+<!-- Dual CTAs -->
+<div class="flex flex-row items-center gap-space-sm pt-space-xs">
+<a class="flex-1 min-h-[48px] px-space-md py-space-sm bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps tracking-widest uppercase flex items-center justify-center transition-colors active:bg-primary" href="#projects">
+        Lihat Proyek
+      </a>
+<a class="flex-1 min-h-[48px] px-space-md py-space-sm bg-surface-container text-on-surface font-label-caps text-label-caps tracking-widest uppercase flex items-center justify-center transition-colors active:bg-surface-container-high" href="#team">
+        Kenali Tim
+      </a>
+</div>
+<!-- Documentary Photo Container -->
+<div class="flex flex-col gap-space-xs mt-space-sm">
+<div class="relative w-full aspect-[16/9] bg-surface-container-low overflow-hidden">
+<img class="w-full h-full object-cover grayscale contrast-125" data-alt="Candid film-grained documentary photograph of university engineering and design students setting up transparent interactive HUD projection screens in a dimly lit dark university exhibition hall with subtle neon ambient lights, authentic lab documentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_LERil2AtCkATdpdPH77Suj-PbkkD6tj6wwqohWKGsdxtuZH8fS0xIyhopApE8Jyd1dYh0h0CWy26maOCHoumQXZcVhIAoFJToi9ja6A5ETm2XiOQndHtk0LCVArtRdrFGh4TgD0yg-ckNQC_5WALH2BBMeVC1AvT_KRvaGjVi3NSPFmxKapQddTLRTM3FLGyO9bq7HdgMhaTxxAQQ0vLaYeQQDPvoJQzsfS6-9s"/>
+<div class="absolute top-2 left-2 px-space-xs py-0.5 bg-surface-container-lowest text-primary font-label-caps text-[10px] tracking-wider uppercase">
+          LOG // 04.24
+        </div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant/70 font-label-caps text-[11px]">
+<span>Dokumentasi Lab — Penyiapan &amp; Kalibrasi</span>
+<span>INDEKS 01/08</span>
+</div>
+</div>
+</section>
+<!-- SECTION 2: SIAPA KAMI -->
+<section class="flex flex-col gap-space-lg py-space-xl bg-surface-container-low -mx-margin-mobile px-margin-mobile">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest">
+        // 01 · LANDASAN
+      </span>
+<h2 class="font-headline-sm text-headline-sm text-primary uppercase">
+        SIAPA KAMI
+      </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+      We are five students across computer science, electrical engineering, and digital design who meet after lectures to bypass theoretical exercises. We design, architect, and solder physical rigs, algorithmic graphics, and distributed pipelines.
+    </p>
+<!-- 3 Clean Focus Points -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<div class="p-space-md bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[1.125rem] text-primary">01 / KARYA MANDIRI</span>
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">terminal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Tanpa templat generik atau tugas simulasi. Setiap komponen, papan sirkuit khusus, dan skrip shader dibuat dari awal agar andal digunakan.
+        </p>
+</div>
+<div class="p-space-md bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[1.125rem] text-primary">02 / SUMBER TERBUKA</span>
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">code</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Repositori publik, rancangan CAD yang dapat diakses, dan skema firmware yang dapat dibuat ulang. Kami membagikan seluruh arsitektur untuk komunitas.
+        </p>
+</div>
+<div class="p-space-md bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-[1.125rem] text-primary">03 / PEMBELAJARAN TERAPAN</span>
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">memory</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Mengganti ujian teori dengan uji langsung: menjalankan driver WebGPU di perangkat berdaya rendah dan menulis pengendali protokol serial berfrekuensi tinggi.
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 3: TIM KAMI -->
+<section class="flex flex-col gap-space-lg py-space-2xl" id="team">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest">
+        // 02 · ANGGOTA
+      </span>
+<h2 class="font-headline-sm text-headline-sm text-primary uppercase">
+        TIM KAMI
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Tim lintas disiplin yang bekerja di bidang perangkat keras, protokol, dan antarmuka.
+      </p>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Member 1: Mochammad Rafi Nur Alfan -->
+<article class="p-space-md bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-sm text-[1.125rem] text-primary">Mochammad Rafi Nur Alfan</h3>
+<span class="font-label-caps text-[11px] text-primary-fixed uppercase">Sistem &amp; Arsitektur</span>
+</div>
+<a aria-label="GitHub profile" class="min-w-[40px] min-h-[40px] flex items-center justify-center text-on-surface hover:text-primary-fixed" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface/80">
+          Focusing on distributed concurrent services, Rust backend runtime architectures, and fault-tolerant network topologies for lab hardware nodes.
+        </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">Rust</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">gRPC</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">Docker</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">Linux Kernel</span>
+</div>
+</article>
+<!-- Member 2: Raga Syahputra Arifin -->
+<article class="p-space-md bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-sm text-[1.125rem] text-primary">Raga Syahputra Arifin</h3>
+<span class="font-label-caps text-[11px] text-primary-fixed uppercase">DSP &amp; Streaming</span>
+</div>
+<a aria-label="GitHub profile" class="min-w-[40px] min-h-[40px] flex items-center justify-center text-on-surface hover:text-primary-fixed" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface/80">
+          Specializing in ultra-low latency real-time WebRTC audio pipelines, discrete Fourier transform analysis, and spatial multi-channel audio synthesis.
+        </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">C++ / JUCE</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">Web Audio API</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">WebRTC</span>
+</div>
+</article>
+<!-- Member 3: Rania Nurillah -->
+<article class="p-space-md bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-sm text-[1.125rem] text-primary">Rania Nurillah</h3>
+<span class="font-label-caps text-[11px] text-primary-fixed uppercase">Antarmuka &amp; Produk</span>
+</div>
+<a aria-label="GitHub profile" class="min-w-[40px] min-h-[40px] flex items-center justify-center text-on-surface hover:text-primary-fixed" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface/80">
+          Translating complex state machines into human-legible, ergonomic design systems, modular UI tokens, and accessible interaction models.
+        </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">Desain Systems</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">Figma Tokens</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">TypeScript</span>
+</div>
+</article>
+<!-- Member 4: Sevia Dwi Novitasari (With photo IMAGE_23) -->
+<article class="p-space-md bg-surface-container flex flex-col gap-space-sm">
+<div class="w-full aspect-square bg-surface-container-high overflow-hidden mb-space-xs">
+<img alt="Sevia Dwi Novitasari - Pemrograman Kreatif &amp; WebGL" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrD_hX3inm0naknjTKTaT-CoM-BI22hilQz39oYWgRMGGpG7gqDjlESkNCI_jlpt4JkVyODA5D7nD2R-8eR-jIAnS6RAIIcK32fUkdWKdlTKkNEjrGCOT8XL7fMPjwvFRdL6eTo1-c24_BR0Rg0PUtJmRRCg09MMa5MHgUhlIoT_GT2krG7R6LN-YGUe9AC5dzte0oRUoigaxUBIqIUt30EJ-BKoirnRahKWrGfb-ng"/>
+</div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-sm text-[1.125rem] text-primary">Sevia Dwi Novitasari</h3>
+<span class="font-label-caps text-[11px] text-primary-fixed uppercase">Pemrograman Kreatif &amp; WebGL</span>
+</div>
+<a aria-label="GitHub profile" class="min-w-[40px] min-h-[40px] flex items-center justify-center text-on-surface hover:text-primary-fixed" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface/80">
+          Architecting mathematical fragment shaders, generative coordinate geometries, and hardware-accelerated fluid simulations for digital environments.
+        </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">WebGL / GLSL</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">Three.js</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">WebGPU</span>
+</div>
+</article>
+<!-- Member 5: Zhefitra Ananda Wijaya -->
+<article class="p-space-md bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-sm text-[1.125rem] text-primary">Zhefitra Ananda Wijaya</h3>
+<span class="font-label-caps text-[11px] text-primary-fixed uppercase">Komputasi Fisik &amp; Hardware</span>
+</div>
+<a aria-label="GitHub profile" class="min-w-[40px] min-h-[40px] flex items-center justify-center text-on-surface hover:text-primary-fixed" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</a>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface/80">
+          Desaining micro-controller PCB boards, assembling optical sensor rigs, and bridging embedded C++ firmware with desktop websocket daemons.
+        </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">ESP32 / Teensy</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">KiCAD</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">I2C / SPI</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">C++</span>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION 4: PROYEK PILIHAN -->
+<section class="flex flex-col gap-space-lg py-space-xl bg-surface-container-low -mx-margin-mobile px-margin-mobile" id="projects">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest">
+        // 03 · PENERAPAN
+      </span>
+<h2 class="font-headline-sm text-headline-sm text-primary uppercase">
+        PROYEK PILIHAN
+      </h2>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Project 1: AURA (with IMAGE_24) -->
+<article class="bg-surface-container flex flex-col">
+<div class="w-full aspect-[16/9] bg-surface-container-high overflow-hidden">
+<img alt="AURA Generative Sound Interface preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrCQC4-OVekCdkiUXlDTZvD6opLjnkqmaIibZYX27pQRBHOF_LuhS-7cY_bjd2kpNWBzmluAWTo0bLJnuwPqRjtxH-GyMQ-LAGw2qy_OECFSiHKg18ndKTVyrtCAGUwBapZ2yr-XLJ08HBp669nkzu9qPaPVOIxYtmdvr0OkID4AFeiBKr45do6F2iuX3QIRCajk8QlXRMPPDTN9Dg3F2wPS1ewK2wm4BZtRsGigzduU"/>
+</div>
+<div class="p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-primary-fixed tracking-wider uppercase">[•] DEPLOYED // LAB V1.2</span>
+<span class="font-code text-[11px] text-on-surface-variant">2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight">AURA: SPATIAL AUDIO</h3>
+<p class="font-body-sm text-body-sm text-on-surface/80">
+            A real-time Web Audio API and WebGL generative sound visualizer mapping high-frequency ambient input into reactive parametric typography.
+          </p>
+<div class="flex flex-wrap gap-1.5 pt-space-xs">
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">WebGL</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">Web Audio</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">Shader GLSL</span>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<button class="flex-1 min-h-[44px] bg-primary text-on-primary font-label-caps text-label-caps uppercase flex items-center justify-center gap-1 active:bg-primary-fixed">
+<span>Luncurkan Demo</span>
+<span class="material-symbols-outlined text-[16px]">tautan_keluar</span>
+</button>
+<button aria-label="Source code" class="min-w-[44px] min-h-[44px] bg-surface-container-highest text-on-surface flex items-center justify-center active:text-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">code</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Project 2: HYPER_SURFACE -->
+<article class="p-space-md bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase">[•] PROTOTYPE RIG</span>
+<span class="font-code text-[11px] text-on-surface-variant">2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight">HYPER_SURFACE</h3>
+<p class="font-body-sm text-body-sm text-on-surface/80">
+          Tactile LiDAR-driven touchless interface translating multi-point depth feeds into raw gesture vectors with sub-10ms response loops.
+        </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">C++</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">LiDAR SDK</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">ZeroMQ</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant">
+<span class="font-label-caps text-[11px]">STATUS: CALIBRATION</span>
+<a class="font-label-caps text-[11px] text-primary hover:text-primary-fixed flex items-center gap-0.5" href="#">[ VIEW REPO ]</a>
+</div>
+</article>
+<!-- Project 3: SYNTH_VOX -->
+<article class="p-space-md bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-primary-fixed tracking-wider uppercase">[•] ACTIVE RESEARCH</span>
+<span class="font-code text-[11px] text-on-surface-variant">2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight">SYNTH_VOX</h3>
+<p class="font-body-sm text-body-sm text-on-surface/80">
+          Parametric typography experiment adjusting font axes dynamically based on phoneme pitch and cadence detected in local audio input streams.
+        </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">Fon Variabel</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">WebAudio API</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">Canvas 2D</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant">
+<span class="font-label-caps text-[11px]">STATUS: OPEN BETA</span>
+<a class="font-label-caps text-[11px] text-primary hover:text-primary-fixed flex items-center gap-0.5" href="#">[ TEST RUNNER ]</a>
+</div>
+</article>
+<!-- Project 4: KINETIC_KNOT -->
+<article class="p-space-md bg-surface-container flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-[10px] text-on-surface-variant tracking-wider uppercase">[•] BENCHMARK</span>
+<span class="font-code text-[11px] text-on-surface-variant">2023-2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary tracking-tight">KINETIC_KNOT</h3>
+<p class="font-body-sm text-body-sm text-on-surface/80">
+          Mobile-optimized WebGPU particle solver and cloth topology simulation executing 100,000 compute particles at constant 60 FPS.
+        </p>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">WebGPU</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">WGSL</span>
+<span class="px-2 py-0.5 bg-surface-container-highest text-on-surface-variant font-code text-[11px]">Komputasi Shaders</span>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-on-surface-variant">
+<span class="font-label-caps text-[11px]">STATUS: ARCHIVED</span>
+<a class="font-label-caps text-[11px] text-primary hover:text-primary-fixed flex items-center gap-0.5" href="#">[ SPECS &amp; LOG ]</a>
+</div>
+</article>
+</div>
+</section>
+<!-- SECTION 5: CAPABILITIES -->
+<section class="flex flex-col gap-space-lg py-space-2xl">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest">
+        // 04 · CAPABILITIES
+      </span>
+<h2 class="font-headline-sm text-headline-sm text-primary uppercase">
+        FOKUS TEKNIS
+      </h2>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Capability 1 -->
+<div class="p-space-md bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+<span class="font-label-caps text-label-caps tracking-widest uppercase">ENGINEERING &amp; SYSTEMS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface/90">
+          Distributed low-latency architectures, telemetry logging pipelines, cross-platform CLI toolchains, and containerized embedded targets.
+        </p>
+</div>
+<!-- Capability 2 -->
+<div class="p-space-md bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">view_in_ar</span>
+<span class="font-label-caps text-label-caps tracking-widest uppercase">CREATIVE TECH &amp; GRAPHICS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface/90">
+          Custom WGSL/GLSL compute shaders, interactive typography engines, WebGL renderers, and procedural mathematical meshes.
+        </p>
+</div>
+<!-- Capability 3 -->
+<div class="p-space-md bg-surface-container flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs text-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">developer_board</span>
+<span class="font-label-caps text-label-caps tracking-widest uppercase">PHYSICAL &amp; HARDWARE</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface/90">
+          Microcontroller prototyping (ESP32/Teensy), rapid 3D fabrication, optical sensor calibration, and bidirectional serial-to-web transports.
+        </p>
+</div>
+</div>
+</section>
+<!-- SECTION 6: HUBUNGI KAMI -->
+<section class="flex flex-col gap-space-lg py-space-xl bg-surface-container-low -mx-margin-mobile px-margin-mobile">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-widest">
+        // 05 · KONTAK
+      </span>
+<h2 class="font-headline-sm text-headline-sm text-primary uppercase">
+        HUBUNGI KAMI
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Open to cross-lab research collabs, technical inquiries, and project sponsorships.
+      </p>
+</div>
+<!-- Direct Email Block -->
+<div class="p-space-md bg-surface-container flex flex-col gap-space-xs">
+<span class="font-label-caps text-[11px] text-on-surface-variant uppercase">PERTANYAAN LANGSUNG</span>
+<a class="font-headline-sm text-[1.25rem] text-primary hover:text-primary-fixed transition-colors" href="mailto:hello@collective.lab">
+        hello@collective.lab
+      </a>
+<div class="flex items-center gap-space-xs text-on-surface-variant/70 font-code text-[12px] pt-space-xs">
+<span class="material-symbols-outlined text-[16px]">lokasi</span>
+<span>Lab Gedung C / R. 402</span>
+</div>
+</div>
+<!-- Social & Community Links -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<a class="min-h-[48px] p-space-sm bg-surface-container flex items-center justify-between text-on-surface hover:text-primary-fixed transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="font-label-caps text-label-caps">GITHUB</span>
+<span class="material-symbols-outlined text-[16px]">buka_di_tab_baru</span>
+</a>
+<a class="min-h-[48px] p-space-sm bg-surface-container flex items-center justify-between text-on-surface hover:text-primary-fixed transition-colors" href="https://discord.com" rel="noopener noreferrer" target="_blank">
+<span class="font-label-caps text-label-caps">DISCORD</span>
+<span class="material-symbols-outlined text-[16px]">buka_di_tab_baru</span>
+</a>
+<a class="min-h-[48px] p-space-sm bg-surface-container flex items-center justify-between text-on-surface hover:text-primary-fixed transition-colors" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
+<span class="font-label-caps text-label-caps">INSTAGRAM</span>
+<span class="material-symbols-outlined text-[16px]">buka_di_tab_baru</span>
+</a>
+<a class="min-h-[48px] p-space-sm bg-surface-container flex items-center justify-between text-on-surface hover:text-primary-fixed transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span class="font-label-caps text-label-caps">LINKEDIN</span>
+<span class="material-symbols-outlined text-[16px]">buka_di_tab_baru</span>
+</a>
+</div>
+</section>
+</div><footer class="py-space-xl text-center"><p class="font-label-caps text-[9px] uppercase tracking-widest text-on-surface-variant/40">KOLEKTIF Siswa // ALL RIGHTS RESERVED 2025</p></footer></main></body></html>

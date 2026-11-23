@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>[LAB Siswa] // 2025 - Kolektif Teknologi Kreatif</title>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            canvas: "#0B0B0D",
+            surface: "#141419",
+            "surface-subtle": "#1A1A22",
+            "surface-bright": "#22222D",
+            borderLine: "#26262F",
+            limeAccent: "#B6FF5C",
+            "lime-dim": "#84CC28",
+            violetAccent: "#A78BFA",
+            textMain: "#F4F1EA",
+            textMuted: "#9E9EA8",
+          },
+          fontFamily: {
+            sans: ['"Inter"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts: Space Grotesk, JetBrains Mono, Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      background-color: #0B0B0D;
+      color: #F4F1EA;
+      font-family: 'Inter', sans-serif;
+      selection-background-color: #B6FF5C;
+      selection-color: #0B0B0D;
+    }
+    ::selection {
+      background-color: #B6FF5C;
+      color: #0B0B0D;
+    }
+    .grid-mesh {
+      background-image: linear-gradient(to right, #26262F18 1px, transparent 1px),
+                        linear-gradient(to bottom, #26262F18 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .bracket-border {
+      position: relative;
+    }
+    .bracket-border::before {
+      content: "[";
+      font-family: 'JetBrains Mono', monospace;
+      color: #B6FF5C;
+      margin-right: 0.35rem;
+    }
+    .bracket-border::after {
+      content: "]";
+      font-family: 'JetBrains Mono', monospace;
+      color: #B6FF5C;
+      margin-left: 0.35rem;
+    }
+    /* Keep long labels and card content inside narrow viewports. */
+    html, body { max-width: 100%; overflow-x: clip; }
+    img { max-width: 100%; }
+    @media (max-width: 639px) {
+      h1 { font-size: clamp(2rem, 9vw, 3rem); }
+      [data-purpose="navigation-bar"] > div:first-child { flex-wrap: wrap; row-gap: .75rem; }
+      [data-purpose="navigation-bar"] .mobile-nav { flex-basis: 100%; order: 3; }
+      [data-purpose="navigation-bar"] a[aria-label] { gap: .5rem; }
+      [data-purpose="navigation-bar"] a[aria-label] span:nth-child(2) { font-size: .8rem; }
+      [data-purpose="navigation-bar"] a[aria-label] span:nth-child(3) { font-size: .625rem; }
+      [data-purpose="navigation-bar"] .email-label { display: none; }
+      [data-purpose="navigation-bar"] .mobile-nav { display: flex; }
+      [data-purpose="hero-section"] .hero-meta { flex-wrap: wrap; row-gap: .5rem; }
+      [data-purpose="team-roster"] .mt-6 { flex-wrap: wrap; gap: .75rem; }
+      [data-purpose="portfolio-showcase"] .pt-0 { flex-wrap: wrap; gap: .75rem; }
+      [data-purpose="technical-expertise"] li { align-items: flex-start; gap: .5rem; }
+      [data-purpose="technical-expertise"] li span:last-child { text-align: right; }
+      [data-purpose="contact-terminal"] .contact-title { overflow-wrap: anywhere; }
+      [data-purpose="contact-terminal"] .contact-links { min-width: 0; overflow-wrap: anywhere; }
+      footer [data-footer-row] { align-items: flex-start; }
+      footer [data-footer-row] > div { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body id="top" class="bg-canvas text-textMain antialiased min-h-screen grid-mesh relative selection:bg-limeAccent selection:text-black">
+<!-- BEGIN: MainHeader -->
+<header class="w-full bg-[#0B0B0D]/90 backdrop-blur-md sticky top-0 z-50 border-b border-borderLine px-4 sm:px-8 py-3.5" data-purpose="navigation-bar"><div class="max-w-7xl mx-auto flex items-center justify-end">
+<nav class="hidden md:flex items-center gap-8 text-sm text-textMuted">
+<a class="hover:text-textMain transition-colors" href="#about">Tentang</a>
+<a class="hover:text-textMain transition-colors" href="#people">Tim</a>
+<a class="hover:text-textMain transition-colors" href="#projects">Proyek</a>
+<a class="hover:text-textMain transition-colors" href="#expertise">Keahlian</a>
+</nav>
+<nav class="mobile-nav hidden md:hidden w-full items-center gap-5 overflow-x-auto whitespace-nowrap border-t border-borderLine pt-3 text-xs text-textMuted" aria-label="Navigasi utama">
+<a class="hover:text-textMain" href="#about">Tentang</a><a class="hover:text-textMain" href="#people">Tim</a><a class="hover:text-textMain" href="#projects">Proyek</a><a class="hover:text-textMain" href="#expertise">Keahlian</a>
+</nav>
+</div></header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative pt-12 pb-20 sm:pb-28 px-4 sm:px-8 border-b border-borderLine" data-purpose="hero-section"><div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<div class="lg:col-span-7 space-y-8">
+<h1 class="text-4xl sm:text-6xl font-display font-bold leading-[1.05] tracking-tight text-textMain">
+        KAMI MEMBANGUN HAL <br class="hidden sm:inline"/>
+        YANG <span class="text-limeAccent">BERARTI.</span>
+</h1>
+<p class="text-lg text-textMuted leading-relaxed max-w-xl font-sans">
+        Tim Siswa yang mengeksplorasi teknologi, desain, dan gagasan melalui proyek nyata dan kolaborasi. Kami menghubungkan perangkat lunak kreatif, purwarupa perangkat keras, dan pengalaman komputasional.
+      </p>
+<div class="flex flex-wrap items-center gap-4 pt-2 text-sm font-sans">
+<a class="px-6 py-3 rounded bg-limeAccent text-black font-semibold hover:bg-white transition-colors" href="#projects">
+          Lihat Proyek
+        </a>
+<a class="px-6 py-3 rounded border border-borderLine text-textMain hover:border-textMain transition-colors" href="#people">
+          Kenali Tim
+        </a>
+</div>
+</div>
+<div class="lg:col-span-5">
+<div class="rounded-lg overflow-hidden border border-borderLine bg-surface relative">
+<div class="aspect-[4/3] overflow-hidden bg-black">
+<img alt="Lab collective documentation" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrDqWWSoYTf05D4kDAOItPxzb8Kg4QhW910HXR72ShnWTmiFe0hMhjVPVLfKVb_xL6k1n_RdvVNAK5OopNSBeK6CLV6dQqqp6dIsenwX2V_BUx13C-yfs2xARGgWhUgTj2UktUogiNoV2DLt2nrsBxLOB4sdkA0Du_7GXWDfHSIO8i_4t6cEBxVjvyaeIJ4OeOG0B_mFO0OIQHucCwEXg_cD6rpAIXVnykDKfsusziYg"/>
+</div>
+<div class="p-4 flex items-center justify-between text-xs text-textMuted border-t border-borderLine">
+<span>Dokumentasi Lab — Penyiapan &amp; Kalibrasi</span>
+<span class="font-mono text-[11px]">Sesi 024</span>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+<!-- END: HeroSection -->
+<!-- BEGIN: AboutManifestoSection -->
+<section class="py-20 sm:py-28 px-4 sm:px-8 border-b border-borderLine" data-purpose="collective-manifesto" id="about"><div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-4">
+<span class="font-mono text-xs text-limeAccent uppercase tracking-widest">01 / Tentang</span>
+<h2 class="text-3xl sm:text-4xl font-display font-bold text-textMain tracking-tight mt-3">
+        SIAPA KAMI
+      </h2>
+</div>
+<div class="lg:col-span-8 space-y-6 text-base sm:text-lg text-textMuted leading-relaxed">
+<p class="text-textMain font-medium leading-relaxed">
+        Kami adalah kelompok lintas disiplin yang terdiri dari lima Siswa ilmu komputer, teknik elektro, dan desain digital. Kami berkumpul setelah jam kuliah di Lab 402.
+      </p>
+<p>
+        Alih-alih terpaku pada teori buku teks atau tugas kuliah biasa, kami menjadikan kolektif ini sebagai ruang uji kreatif. Kami mengerjakan proyek bersama yang memadukan sistem terdistribusi, grafika komputer interaktif, sensor fisik, dan antarmuka digital yang dirancang dengan cermat.
+      </p>
+<p>
+        Setiap proyek bersifat sumber terbuka atau dipamerkan untuk umum. Kami mengutamakan kesederhanaan yang fungsional, pengerjaan yang saksama, dan kolaborasi langsung.
+      </p>
+<div class="pt-4 grid grid-cols-1 sm:grid-cols-3 gap-6 border-t border-borderLine text-sm">
+<div>
+<h4 class="font-display font-semibold text-textMain mb-1">Karya Mandiri</h4>
+<p class="text-xs text-textMuted leading-relaxed">Berangkat dari rasa ingin tahu dan kemandirian Siswa.</p>
+</div>
+<div>
+<h4 class="font-display font-semibold text-textMain mb-1">Sumber Terbuka</h4>
+<p class="text-xs text-textMuted leading-relaxed">Berbagi kode, skema perangkat keras, dan wawasan secara terbuka.</p>
+</div>
+<div>
+<h4 class="font-display font-semibold text-textMain mb-1">Pembelajaran Terapan</h4>
+<p class="text-xs text-textMuted leading-relaxed">Mengubah riset eksperimental menjadi karya nyata yang berfungsi.</p>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+<!-- END: AboutManifestoSection -->
+<!-- BEGIN: OurPeopleSection -->
+<section class="py-20 sm:py-28 px-4 sm:px-8 border-b border-borderLine" data-purpose="team-roster" id="people"><div class="max-w-7xl mx-auto">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+<div>
+<span class="font-mono text-xs text-limeAccent uppercase tracking-widest">02 / Anggota</span>
+<h2 class="text-3xl sm:text-4xl font-display font-bold text-textMain tracking-tight mt-3">
+        TIM KAMI
+      </h2>
+</div>
+<p class="text-sm text-textMuted max-w-md">
+      Lima orang dengan keahlian berbeda yang bekerja erat di bidang perangkat lunak dan perangkat keras.
+    </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 max-w-5xl mx-auto">
+<!-- Baris pertama: project manager dan Shalsa -->
+<article class="lg:col-start-2 lg:col-span-2 rounded-lg bg-surface border border-borderLine overflow-hidden hover:border-limeAccent transition-colors group">
+<a class="block" href="https://www.instagram.com/foead_anak_baik/" target="_blank" rel="noopener noreferrer" aria-label="Buka Instagram Muhammad Fuad Hasan">
+<div class="aspect-square overflow-hidden bg-[#1A1A22]"><img alt="Foto profil Instagram Muhammad Fuad Hasan" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://unavatar.io/instagram/foead_anak_baik"/></div>
+<div class="p-5"><p class="text-xs font-mono text-limeAccent mb-2">PROJECT MANAGER</p><h3 class="text-lg font-display font-bold text-textMain">Muhammad Fuad Hasan</h3><p class="text-sm text-textMuted mt-2">@foead_anak_baik</p></div>
+</a><div class="px-5 pb-5"><a class="text-xs font-mono text-textMuted hover:text-limeAccent transition-colors" href="https://fhasan.my.id" target="_blank" rel="noopener noreferrer">Website ↗</a></div>
+</article>
+<article class="lg:col-span-2 rounded-lg bg-surface border border-borderLine overflow-hidden hover:border-limeAccent transition-colors group">
+<a class="block" href="https://www.instagram.com/llovessaa/" target="_blank" rel="noopener noreferrer" aria-label="Buka Instagram Shalsabilla Putri Nur’aini">
+<div class="aspect-square overflow-hidden bg-[#1A1A22]"><img alt="Foto Shalsabilla Putri Nur’aini" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="assets/team/shalsa.jpeg"/></div>
+<div class="p-5"><p class="text-xs font-mono text-limeAccent mb-2">ANGGOTA TIM</p><h3 class="text-lg font-display font-bold text-textMain">Shalsabilla Putri Nur’aini</h3><p class="text-sm text-textMuted mt-2">@llovessaa</p></div>
+</a><div class="px-5 pb-5"><a class="text-xs font-mono text-textMuted hover:text-limeAccent transition-colors" href="https://github.com/shalsadev" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+</article>
+<!-- Baris kedua: Vanissa, Marvel (tengah), Nanda -->
+<article class="lg:col-span-2 rounded-lg bg-surface border border-borderLine overflow-hidden hover:border-limeAccent transition-colors group">
+<a class="block" href="https://www.instagram.com/v4nn.dw/" target="_blank" rel="noopener noreferrer" aria-label="Buka Instagram Vanissa Dewi Putri Rianto">
+<div class="aspect-square overflow-hidden bg-[#1A1A22]"><img alt="Foto profil Instagram Vanissa Dewi Putri Rianto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://unavatar.io/instagram/v4nn.dw"/></div>
+<div class="p-5"><p class="text-xs font-mono text-limeAccent mb-2">ANGGOTA TIM</p><h3 class="text-lg font-display font-bold text-textMain">Vanissa Dewi Putri Rianto</h3><p class="text-sm text-textMuted mt-2">@v4nn.dw</p></div>
+</a><div class="px-5 pb-5"><a class="text-xs font-mono text-textMuted hover:text-limeAccent transition-colors" href="https://github.com/vanissadewii" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+</article>
+<article class="lg:col-span-2 rounded-lg bg-surface border border-borderLine overflow-hidden hover:border-limeAccent transition-colors group">
+<a class="block" href="https://www.instagram.com/mapenggk?utm_source=ig_web_button_share_sheet&amp;lqvp=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Buka Instagram Marvel Maulana Saputra">
+<div class="aspect-square overflow-hidden bg-[#1A1A22]"><img alt="Foto profil Instagram Marvel Maulana Saputra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://unavatar.io/instagram/mapenggk"/></div>
+<div class="p-5"><p class="text-xs font-mono text-limeAccent mb-2">ANGGOTA TIM</p><h3 class="text-lg font-display font-bold text-textMain">Marvel Maulana Saputra</h3><p class="text-sm text-textMuted mt-2">@mapenggk</p></div>
+</a><div class="px-5 pb-5"><a class="text-xs font-mono text-textMuted hover:text-limeAccent transition-colors" href="https://github.com/Marvelmaulana" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+</article>
+<article class="lg:col-span-2 rounded-lg bg-surface border border-borderLine overflow-hidden hover:border-limeAccent transition-colors group">
+<a class="block" href="https://www.instagram.com/ldnys_nandd/" target="_blank" rel="noopener noreferrer" aria-label="Buka Instagram Nanda Aurelia Khoirunnisaa">
+<div class="aspect-square overflow-hidden bg-[#1A1A22]"><img alt="Foto profil Instagram Nanda Aurelia Khoirunnisaa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://unavatar.io/instagram/ldnys_nandd"/></div>
+<div class="p-5"><p class="text-xs font-mono text-limeAccent mb-2">ANGGOTA TIM</p><h3 class="text-lg font-display font-bold text-textMain">Nanda Aurelia Khoirunnisaa</h3><p class="text-sm text-textMuted mt-2">@ldnys_nandd</p></div>
+</a><div class="px-5 pb-5"><a class="text-xs font-mono text-textMuted hover:text-limeAccent transition-colors" href="https://github.com/nandaa-cpp" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+</article>
+</div>
+</div></section>
+<!-- END: OurPeopleSection -->
+<!-- BEGIN: ProjectPortfolioSection -->
+<section class="py-20 sm:py-28 px-4 sm:px-8 border-b border-borderLine" data-purpose="portfolio-showcase" id="projects"><div class="max-w-7xl mx-auto">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
+<div>
+<span class="font-mono text-xs text-limeAccent uppercase tracking-widest">03 / Karya</span>
+<h2 class="text-3xl sm:text-4xl font-display font-bold text-textMain tracking-tight mt-3">
+        PROYEK PILIHAN
+      </h2>
+</div>
+<p class="text-sm text-textMuted max-w-md">
+      Bukti konsep yang berfungsi, perangkat lunak spasial, dan paket sumber terbuka yang kami buat di sesi lab.
+    </p>
+</div>
+<!-- Projects Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Proyek 01: AURA -->
+<div class="rounded-lg bg-surface border border-borderLine overflow-hidden flex flex-col justify-between hover:border-textMuted transition-colors">
+<div>
+<div class="aspect-video bg-black overflow-hidden border-b border-borderLine">
+<img alt="AURA Generative Sound and Spasial Visualizer preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrCQC4-OVekCdkiUXlDTZvD6opLjnkqmaIibZYX27pQRBHOF_LuhS-7cY_bjd2kpNWBzmluAWTo0bLJnuwPqRjtxH-GyMQ-LAGw2qy_OECFSiHKg18ndKTVyrtCAGUwBapZ2yr-XLJ08HBp669nkzu9qPaPVOIxYtmdvr0OkID4AFeiBKr45do6F2iuX3QIRCajk8QlXRMPPDTN9Dg3F2wPS1ewK2wm4BZtRsGigzduU"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between text-xs font-mono text-textMuted">
+<span>Proyek 01</span>
+<span class="text-limeAccent">Aktif / Demo Langsung</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-textMain">AURA</h3>
+<p class="text-sm text-textMuted leading-relaxed">
+            Visualisasi audio waktu nyata di peramban yang mengubah frekuensi mikrofon menjadi pergeseran titik reaktif dan bentuk tipografi kinetik.
+          </p>
+<div class="flex flex-wrap gap-2 text-xs font-mono text-textMuted pt-2">
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine">WebGL</span>
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine">Web Audio API</span>
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine">Three.js</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0 flex items-center justify-between text-xs font-mono">
+<a class="text-limeAccent hover:underline flex items-center gap-1" href="#people">Diskusikan proyek ↗</a>
+<a class="text-textMuted hover:text-textMain" href="https://github.com" target="_blank">Kode Sumber</a>
+</div>
+</div>
+<!-- Proyek 02: HYPER_SURFACE -->
+<div class="rounded-lg bg-surface border border-borderLine overflow-hidden flex flex-col justify-between hover:border-textMuted transition-colors">
+<div>
+<div class="aspect-video bg-black overflow-hidden border-b border-borderLine">
+<img alt="HYPER_SURFACE tactile interactive rig preview" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrDqWWSoYTf05D4kDAOItPxzb8Kg4QhW910HXR72ShnWTmiFe0hMhjVPVLfKVb_xL6k1n_RdvVNAK5OopNSBeK6CLV6dQqqp6dIsenwX2V_BUx13C-yfs2xARGgWhUgTj2UktUogiNoV2DLt2nrsBxLOB4sdkA0Du_7GXWDfHSIO8i_4t6cEBxVjvyaeIJ4OeOG0B_mFO0OIQHucCwEXg_cD6rpAIXVnykDKfsusziYg"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between text-xs font-mono text-textMuted">
+<span>Proyek 02</span>
+<span class="text-textMuted">Purwarupa Perangkat Keras</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-textMain">HYPER_SURFACE</h3>
+<p class="text-sm text-textMuted leading-relaxed">
+            Permukaan proyeksi akrilik berlapis yang melacak jarak dan gestur tangan beberapa pengguna dengan sensor LiDAR jarak dekat dan protokol OSC.
+          </p>
+<div class="flex flex-wrap gap-2 text-xs font-mono text-textMuted pt-2">
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine">LiDAR</span>
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine">TouchDesigner</span>
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine">C++</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0 flex items-center justify-between text-xs font-mono">
+<a class="text-limeAccent hover:underline flex items-center gap-1" href="#people">Tanyakan proyek ini ↗</a>
+<span class="text-textMuted">Dipamerkan '24</span>
+</div>
+</div>
+<!-- Proyek 03: SYNTH_VOX -->
+<div class="rounded-lg bg-surface border border-borderLine overflow-hidden flex flex-col justify-between hover:border-textMuted transition-colors">
+<div>
+<div class="aspect-video bg-black border-b border-borderLine flex items-center justify-center p-6 text-center">
+<div class="font-display font-bold text-3xl sm:text-4xl text-textMain tracking-tight">
+            SYNTH_VOX <span class="text-limeAccent text-xl font-mono block mt-1 font-normal">v0.9b</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between text-xs font-mono text-textMuted">
+<span>Proyek 03</span>
+<span class="text-limeAccent">Sumber Terbuka</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-textMain">SYNTH_VOX</h3>
+<p class="text-sm text-textMuted leading-relaxed">
+            Interpolasi fon parametrik waktu nyata yang dipicu nada mikrofon dan mengubah ukuran optis, kemiringan, serta ketebalan fon.
+          </p>
+<div class="flex flex-wrap gap-2 text-xs font-mono text-textMuted pt-2">
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine">Fon Variabel</span>
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine">WebAudio</span>
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine">ONNX.js</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0 flex items-center justify-between text-xs font-mono">
+<a class="text-limeAccent hover:underline flex items-center gap-1" href="#people">Tanyakan proyek ini ↗</a>
+<a class="text-textMuted hover:text-textMain" href="https://github.com" target="_blank">Paket GitHub</a>
+</div>
+</div>
+<!-- Proyek 04: KINETIC_KNOT -->
+<div class="rounded-lg bg-surface border border-borderLine overflow-hidden flex flex-col justify-between hover:border-textMuted transition-colors">
+<div>
+<div class="aspect-video bg-[#0E0E12] border-b border-borderLine flex items-center justify-center p-6 text-center">
+<div class="font-display font-bold text-3xl text-textMuted tracking-tight">
+            KINETIC_KNOT <span class="text-xs font-mono block mt-1 text-textMuted font-normal">Mesin Fisika WebGPU</span>
+</div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex items-center justify-between text-xs font-mono text-textMuted">
+<span>Proyek 04</span>
+<span class="text-textMuted">Hasil Riset</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-textMain">KINETIC_KNOT</h3>
+<p class="text-sm text-textMuted leading-relaxed">
+            Simulasi sisi klien berkinerja tinggi untuk fisika kain dan simpul spasial, dikendalikan gestur kamera web secara waktu nyata.
+          </p>
+<div class="flex flex-wrap gap-2 text-xs font-mono text-textMuted pt-2">
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine">WebGPU</span>
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine">WGSL</span>
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine">MediaPipe</span>
+</div>
+</div>
+</div>
+<div class="p-6 pt-0 flex items-center justify-between text-xs font-mono">
+<a class="text-limeAccent hover:underline flex items-center gap-1" href="#people">Diskusikan proyek ↗</a>
+<a class="text-textMuted hover:text-textMain" href="https://github.com" target="_blank">Kode Sumber</a>
+</div>
+</div>
+</div>
+</div></section>
+<!-- END: ProjectPortfolioSection -->
+<!-- BEGIN: ExpertiseSection -->
+<section class="py-20 sm:py-28 px-4 sm:px-8 border-b border-borderLine" data-purpose="technical-expertise" id="expertise"><div class="max-w-7xl mx-auto">
+<div class="mb-12">
+<span class="font-mono text-xs text-limeAccent uppercase tracking-widest">04 / Kapabilitas</span>
+<h2 class="text-3xl sm:text-4xl font-display font-bold text-textMain tracking-tight mt-3">
+      FOKUS TEKNIS
+    </h2>
+<p class="text-sm text-textMuted mt-2 max-w-md">
+      Perangkat dan teknologi yang kami gunakan serta evaluasi dalam proyek.
+    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-6 rounded-lg bg-surface border border-borderLine space-y-4">
+<div class="pb-3 border-b border-borderLine flex items-center justify-between">
+<h3 class="font-display font-bold text-base text-textMain">Rekayasa &amp; Sistem</h3>
+<span class="text-xs font-mono text-textMuted">01</span>
+</div>
+<ul class="space-y-3 text-sm text-textMuted font-sans">
+<li class="flex items-center justify-between"><span>TypeScript &amp; Next.js</span> <span class="text-xs font-mono text-textMuted">Full-Stack</span></li>
+<li class="flex items-center justify-between"><span>Rust &amp; C++</span> <span class="text-xs font-mono text-textMuted">Tingkat Rendah</span></li>
+<li class="flex items-center justify-between"><span>WebSockets &amp; WebRTC</span> <span class="text-xs font-mono text-textMuted">Jaringan</span></li>
+<li class="flex items-center justify-between"><span>WebAudio &amp; DSP</span> <span class="text-xs font-mono text-textMuted">Sinyal</span></li>
+<li class="flex items-center justify-between"><span>Docker &amp; Linux</span> <span class="text-xs font-mono text-textMuted">Infrastruktur</span></li>
+</ul>
+</div>
+<div class="p-6 rounded-lg bg-surface border border-borderLine space-y-4">
+<div class="pb-3 border-b border-borderLine flex items-center justify-between">
+<h3 class="font-display font-bold text-base text-textMain">Teknologi Kreatif &amp; Grafika</h3>
+<span class="text-xs font-mono text-textMuted">02</span>
+</div>
+<ul class="space-y-3 text-sm text-textMuted font-sans">
+<li class="flex items-center justify-between"><span>WebGL &amp; Three.js</span> <span class="text-xs font-mono text-textMuted">3D</span></li>
+<li class="flex items-center justify-between"><span>WebGPU &amp; WGSL</span> <span class="text-xs font-mono text-textMuted">Komputasi</span></li>
+<li class="flex items-center justify-between"><span>Shader GLSL</span> <span class="text-xs font-mono text-textMuted">GPU</span></li>
+<li class="flex items-center justify-between"><span>TouchDesigner</span> <span class="text-xs font-mono text-textMuted">Waktu Nyata</span></li>
+<li class="flex items-center justify-between"><span>Sistem Figma</span> <span class="text-xs font-mono text-textMuted">Desain</span></li>
+</ul>
+</div>
+<div class="p-6 rounded-lg bg-surface border border-borderLine space-y-4">
+<div class="pb-3 border-b border-borderLine flex items-center justify-between">
+<h3 class="font-display font-bold text-base text-textMain">Fisik &amp; Perangkat Keras</h3>
+<span class="text-xs font-mono text-textMuted">03</span>
+</div>
+<ul class="space-y-3 text-sm text-textMuted font-sans">
+<li class="flex items-center justify-between"><span>ESP32 &amp; Arduino</span> <span class="text-xs font-mono text-textMuted">Firmware</span></li>
+<li class="flex items-center justify-between"><span>LiDAR &amp; Sensor Rigs</span> <span class="text-xs font-mono text-textMuted">Spasial</span></li>
+<li class="flex items-center justify-between"><span>Pemetaan Proyeksi</span> <span class="text-xs font-mono text-textMuted">Kalibrasi</span></li>
+<li class="flex items-center justify-between"><span>Fabrikasi Cepat</span> <span class="text-xs font-mono text-textMuted">CNC/Laser</span></li>
+<li class="flex items-center justify-between"><span>ROS2 / Operasi Fisik</span> <span class="text-xs font-mono text-textMuted">Robotika</span></li>
+</ul>
+</div>
+</div>
+</div></section>
+<!-- END: ExpertiseSection -->
+<!-- BEGIN: SiteFooter -->
+<footer class="py-10 px-4 sm:px-8 border-t border-borderLine bg-canvas" data-purpose="site-footer"><div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-textMuted" data-footer-row>
+<div class="flex items-center gap-2">
+<span>© 2024–2025</span>
+</div>
+<div class="flex items-center gap-6">
+<a class="text-textMain hover:text-limeAccent transition-colors" href="#top">Kembali ke atas ↑</a>
+<a class="text-textMain hover:text-limeAccent transition-colors" href="prototypes/">Arsip desain ↗</a>
+</div>
+</div></footer>
+<!-- END: SiteFooter -->
+</body></html>

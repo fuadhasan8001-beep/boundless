@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container":"#201f21","on-secondary-container":"#bea8ff","primary-fixed":"#aff755","on-primary-fixed-variant":"#2f4f00","surface-container-highest":"#353437","error":"#ffb4ab","surface-dim":"#131315","tertiary-container":"#e5e2db","inverse-on-surface":"#313032","background":"#131315","surface-container-high":"#2a2a2c","on-secondary-fixed":"#21005e","secondary-container":"#4f319c","surface-tint":"#94da3a","on-primary":"#1f3700","error-container":"#93000a","on-surface-variant":"#c1cab1","secondary":"#cebdff","primary":"#ffffff","on-secondary-fixed-variant":"#4f319c","on-secondary":"#381385","surface-variant":"#353437","surface-bright":"#39393b","tertiary-fixed-dim":"#c9c6c0","outline":"#8c947d","secondary-fixed":"#e8ddff","on-error":"#690005","surface":"#131315","on-tertiary":"#31312c","inverse-primary":"#406900","on-tertiary-fixed-variant":"#474742","primary-container":"#aff755","secondary-fixed-dim":"#cebdff","inverse-surface":"#e5e1e4","on-error-container":"#ffdad6","tertiary-fixed":"#e5e2db","on-surface":"#e5e1e4","on-background":"#e5e1e4","primary-fixed-dim":"#94da3a","surface-container-lowest":"#0e0e10","outline-variant":"#424937","on-tertiary-fixed":"#1c1c18","tertiary":"#ffffff","surface-container-low":"#1c1b1d","on-primary-container":"#447000","on-primary-fixed":"#102000","on-tertiary-container":"#65645f"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"space-2xl":"4rem","margin-mobile":"1.25rem","space-xl":"2.5rem","gutter-mobile":"1rem","space-xs":"0.25rem","space-3xl":"6rem",margin:"3rem",gutter:"1.5rem","space-sm":"0.5rem","space-lg":"1.5rem","space-md":"1rem"},fontFamily:{"body-md":["Inter"],"headline-sm":["Space Grotesk"],"body-lg":["Inter"],code:["JetBrains Mono"],"stat-lg":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"headline-lg-mobile":["Space Grotesk"],"body-sm":["Inter"],"display-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"label-caps":["JetBrains Mono"],display:["Space Grotesk"]},fontSize:{"body-md":["0.9375rem",{lineHeight:"1.5rem",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["1.5rem",{lineHeight:"1.75rem",letterSpacing:"-0.02em",fontWeight:"600"}],"body-lg":["1.125rem",{lineHeight:"1.75rem",letterSpacing:"-0.01em",fontWeight:"400"}],code:["0.875rem",{lineHeight:"1.375rem",letterSpacing:"0em",fontWeight:"500"}],"stat-lg":["2.5rem",{lineHeight:"2.75rem",letterSpacing:"-0.02em",fontWeight:"700"}],"headline-lg":["3.5rem",{lineHeight:"3.75rem",letterSpacing:"-0.03em",fontWeight:"700"}],"headline-lg-mobile":["2.25rem",{lineHeight:"2.5rem",letterSpacing:"-0.025em",fontWeight:"700"}],"body-sm":["0.8125rem",{lineHeight:"1.25rem",letterSpacing:"0em",fontWeight:"400"}],"display-mobile":["3rem",{lineHeight:"3.125rem",letterSpacing:"-0.03em",fontWeight:"700"}],"headline-md":["2.25rem",{lineHeight:"2.5rem",letterSpacing:"-0.025em",fontWeight:"600"}],"label-caps":["0.75rem",{lineHeight:"1rem",letterSpacing:"0.08em",fontWeight:"600"}],display:["5rem",{lineHeight:"5rem",letterSpacing:"-0.04em",fontWeight:"700"}]}}}};</script><title>Keahlian Teknis — Konsep</title></head><body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 left-0 w-full z-50 bg-surface/90 backdrop-blur-md"><div class="h-16 w-full px-margin-mobile lg:px-margin flex items-center justify-between gap-4"><div class="flex items-center gap-space-md shrink-0"><div class="flex items-center gap-space-xs font-label-caps text-label-caps uppercase bg-surface-container-low px-space-sm py-1"><span class="text-on-surface font-semibold">[COLLECTIVE] // 2025</span><span class="text-outline">|</span><span class="inline-flex items-center gap-1 text-primary-fixed-dim"><span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span>AKTIF</span></div><div class="hidden xl:flex items-center font-code text-body-sm text-on-surface-variant"><span class="text-outline mr-1.5">//</span>LAB BUKA 22:00-04:00</div></div><nav class="hidden lg:flex items-center gap-1 font-code text-body-sm" data-active-classes="text-primary-container bg-surface-container-high"><a class="px-space-sm py-1.5 text-on-surface-variant hover:text-primary-container hover:bg-surface-container-high transition-colors" data-path="about" href="#">// 01_TENTANG</a><a class="px-space-sm py-1.5 text-on-surface-variant hover:text-primary-container hover:bg-surface-container-high transition-colors" data-path="people" href="#">// 02_ANGGOTA</a><a class="px-space-sm py-1.5 text-on-surface-variant hover:text-primary-container hover:bg-surface-container-high transition-colors" data-path="projects" href="#">// 03_PROYEK</a><a aria-current="page" class="px-space-sm py-1.5 transition-colors text-primary-container bg-surface-container-high" data-path="expertise" href="#">// 04_KEAHLIAN</a><a class="px-space-sm py-1.5 text-on-surface-variant hover:text-primary-container hover:bg-surface-container-high transition-colors" data-path="contact" href="#">// 05_KONTAK</a></nav><div class="flex items-center gap-space-md shrink-0"><a class="inline-flex items-center justify-center bg-primary-container text-on-primary font-code text-label-caps uppercase px-space-md h-9 tracking-wider hover:bg-tertiary hover:text-on-tertiary transition-colors shadow-[2px_2px_0px_0px_#353437]" data-path="dispatch" href="#">HUBUNGI_LAB ↗</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">orang</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- SECTION 01: HERO / CATALOG HEADER -->
+<section class="relative w-full px-margin-mobile lg:px-margin pt-space-xl pb-space-2xl bg-surface-container-lowest">
+<div class="w-full flex flex-col gap-space-lg">
+<!-- Monospace dossier header metadata -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm bg-surface-container-low px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm font-label-caps text-label-caps text-primary-fixed">
+<span class="inline-block w-2 h-2 bg-primary-container"></span>
+<span>// 04_CAPABILITIES_DOSSIER // DEPT_SPEC_SHEET</span>
+</div>
+<div class="flex items-center gap-space-md font-code text-body-sm text-on-surface-variant">
+<span>CLASSIFICATION: OPEN_LAB_R&amp;D</span>
+<span class="text-outline">/</span>
+<span>SYS_REV: v2.4.9</span>
+<span class="text-outline">/</span>
+<span class="text-primary-fixed-dim">[AKTIF]</span>
+</div>
+</div>
+<!-- Main Asymmetric Headline Matrix -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end mt-space-md">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<span class="font-code text-label-caps uppercase text-on-surface-variant tracking-widest">// RIGOROUS PHYSICAL-DIGITAL PROTOTYPING</span>
+<h1 class="font-headline-lg text-headline-lg text-primary uppercase tracking-tighter">
+            FULL-STACK MEETS PHYSICAL RIGS.
+          </h1>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-md bg-surface-container p-space-lg shadow-[4px_4px_0px_0px_#aff755]">
+<div class="flex items-center justify-between font-code text-label-caps text-primary-fixed uppercase">
+<span>[PHILOSOPHY]</span>
+<span>VERIFIED_RIG</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed">
+            Kami tidak berhenti pada presentasi. Kapabilitas kami telah diuji melalui instalasi interaktif langsung, sistem peristiwa terdistribusi, dan perangkat keras berlatensi rendah.
+          </p>
+<div class="flex items-center gap-space-xs font-code text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary-container">memory</span>
+<span>NO THEORETICAL CODE. DEPLOYABLE TELEMETRY ONLY.</span>
+</div>
+</div>
+</div>
+<!-- Diagnostic Telemetry Ribbon -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter mt-space-lg">
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-xs">
+<span class="font-code text-label-caps text-on-surface-variant">TARGET LATENCY</span>
+<span class="font-stat-lg text-stat-lg text-primary-fixed">&lt;14MS</span>
+<span class="font-code text-body-sm text-outline">HARD REAL-TIME GUARANTEE</span>
+</div>
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-xs">
+<span class="font-code text-label-caps text-on-surface-variant">THROUGHPUT TESTED</span>
+<span class="font-stat-lg text-stat-lg text-primary">100K/S</span>
+<span class="font-code text-body-sm text-outline">CONCURRENT WS BROADCASTS</span>
+</div>
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-xs">
+<span class="font-code text-label-caps text-on-surface-variant">SPATIAL PRECISION</span>
+<span class="font-stat-lg text-stat-lg text-secondary">±0.8MM</span>
+<span class="font-code text-body-sm text-outline">LIDAR TRACKING RESOLUTION</span>
+</div>
+<div class="bg-surface-container-low p-space-md flex flex-col gap-space-xs">
+<span class="font-code text-label-caps text-on-surface-variant">STRESS RUNTIME</span>
+<span class="font-stat-lg text-stat-lg text-primary-fixed">72_HRS</span>
+<span class="font-code text-body-sm text-outline">ZERO FAIL CRASH RESILIENCE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 02: THE CORE 3-PILLAR RESEARCH MATRIX -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-3xl bg-background">
+<div class="flex flex-col gap-space-2xl">
+<!-- Section Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md pb-space-md bg-surface-container-lowest p-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-code text-label-caps uppercase text-primary-container">// ARCHITECTURAL SPECIFICATION MATRIX</span>
+<h2 class="font-headline-md text-headline-md text-primary uppercase tracking-tight">THE THREE FOUNDATIONAL CORES</h2>
+</div>
+<div class="font-code text-body-sm text-on-surface-variant">
+<span>PARALLEL PIPELINES // MULTI-DISCIPLINARY EXECUTION</span>
+</div>
+</div>
+<!-- Matrix Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- PILLAR 01 -->
+<div class="group flex flex-col bg-surface-container p-space-xl relative transition-all duration-150 hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_#aff755]">
+<!-- Card Tag Header -->
+<div class="flex items-center justify-between pb-space-md mb-space-lg bg-surface-container-low p-space-sm">
+<span class="font-code text-label-caps text-primary-container">// 01_CORE</span>
+<span class="font-code text-label-caps text-on-surface-variant">ENGINEERING</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm uppercase tracking-tight group-hover:text-primary-container transition-colors">
+            // 01 CODE &amp; ARCHITECTURE
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+            Ultra-resilient digital infrastructures, distributed low-latency socket clusters, and bare-metal high-throughput system services.
+          </p>
+<!-- Spec Breakdown -->
+<div class="flex flex-col gap-space-sm mb-space-xl flex-grow">
+<span class="font-code text-label-caps uppercase text-outline">PRIMARY CAPABILITIES:</span>
+<div class="flex flex-col gap-space-xs font-code text-body-sm text-on-surface">
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-primary-container">&gt;</span>
+<span>Distributed Microservices &amp; Edge Sync</span>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-primary-container">&gt;</span>
+<span>Real-Time Bi-Directional WebSockets</span>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-primary-container">&gt;</span>
+<span>WebAudio DSP &amp; Spectral Synthesizers</span>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-primary-container">&gt;</span>
+<span>C++ &amp; Rust Native Komputasi Pipelines</span>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-primary-container">&gt;</span>
+<span>Next.js 15 App Architecture &amp; Hybrid SSR</span>
+</div>
+</div>
+</div>
+<!-- Benchmarks Box -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col gap-space-xs">
+<span class="font-code text-label-caps text-primary-fixed uppercase tracking-wider">[BENCHMARK_PROOFS]</span>
+<div class="flex items-baseline justify-between font-code text-body-sm text-on-surface pt-space-xs">
+<span class="text-on-surface-variant">Network Frame:</span>
+<span class="text-primary-container font-semibold">&lt;14ms latency</span>
+</div>
+<div class="flex items-baseline justify-between font-code text-body-sm text-on-surface">
+<span class="text-on-surface-variant">Broker Engine:</span>
+<span class="text-primary font-semibold">100k events/sec</span>
+</div>
+<div class="flex items-baseline justify-between font-code text-body-sm text-on-surface">
+<span class="text-on-surface-variant">SIMD WebAssembly:</span>
+<span class="text-secondary font-semibold">Native parallel speed</span>
+</div>
+</div>
+</div>
+<!-- PILLAR 02 -->
+<div class="group flex flex-col bg-surface-container p-space-xl relative transition-all duration-150 hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_#cebdff]">
+<!-- Card Tag Header -->
+<div class="flex items-center justify-between pb-space-md mb-space-lg bg-surface-container-low p-space-sm">
+<span class="font-code text-label-caps text-secondary">// 02_CORE</span>
+<span class="font-code text-label-caps text-on-surface-variant">IMMERSION</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm uppercase tracking-tight group-hover:text-secondary transition-colors">
+            // 02 INTERACTION &amp; SPATIAL COMPUTING
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+            Real-time generative graphics engines, dynamic fragment shaders, kinetic type models, and cross-platform spatial canvases.
+          </p>
+<!-- Spec Breakdown -->
+<div class="flex flex-col gap-space-sm mb-space-xl flex-grow">
+<span class="font-code text-label-caps uppercase text-outline">PRIMARY CAPABILITIES:</span>
+<div class="flex flex-col gap-space-xs font-code text-body-sm text-on-surface">
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-secondary">&gt;</span>
+<span>WebGL &amp; WebGPU Custom Render Pipelines</span>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-secondary">&gt;</span>
+<span>Custom Three.js Scene Graphs &amp; Physics</span>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-secondary">&gt;</span>
+<span>TouchDesigner OSC Multi-Node Networks</span>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-secondary">&gt;</span>
+<span>Handcrafted GLSL / WGSL Fragment Shaders</span>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-secondary">&gt;</span>
+<span>Variable Kinetic Typography Engines</span>
+</div>
+</div>
+</div>
+<!-- Benchmarks Box -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col gap-space-xs">
+<span class="font-code text-label-caps text-secondary uppercase tracking-wider">[BENCHMARK_PROOFS]</span>
+<div class="flex items-baseline justify-between font-code text-body-sm text-on-surface pt-space-xs">
+<span class="text-on-surface-variant">Frame Stability:</span>
+<span class="text-secondary font-semibold">Locked 60fps Mobile/Desk</span>
+</div>
+<div class="flex items-baseline justify-between font-code text-body-sm text-on-surface">
+<span class="text-on-surface-variant">Memory Ceiling:</span>
+<span class="text-primary font-semibold">Zero Garbage Collection GC</span>
+</div>
+<div class="flex items-baseline justify-between font-code text-body-sm text-on-surface">
+<span class="text-on-surface-variant">Dynamic Lights:</span>
+<span class="text-primary-container font-semibold">128+ clustered passes</span>
+</div>
+</div>
+</div>
+<!-- PILLAR 03 -->
+<div class="group flex flex-col bg-surface-container p-space-xl relative transition-all duration-150 hover:-translate-y-1 hover:shadow-[4px_4px_0px_0px_#aff755]">
+<!-- Card Tag Header -->
+<div class="flex items-center justify-between pb-space-md mb-space-lg bg-surface-container-low p-space-sm">
+<span class="font-code text-label-caps text-primary-container">// 03_CORE</span>
+<span class="font-code text-label-caps text-on-surface-variant">FABRICATION</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-sm uppercase tracking-tight group-hover:text-primary-container transition-colors">
+            // 03 PHYSICAL &amp; EMBEDDED COMPUTING
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+            Hardware rigging, industrial robotics protocols, environmental tracking, laser calibration, and custom mechanical chassis.
+          </p>
+<!-- Spec Breakdown -->
+<div class="flex flex-col gap-space-sm mb-space-xl flex-grow">
+<span class="font-code text-label-caps uppercase text-outline">PRIMARY CAPABILITIES:</span>
+<div class="flex flex-col gap-space-xs font-code text-body-sm text-on-surface">
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-primary-container">&gt;</span>
+<span>ESP32 / Teensy Custom Firmware &amp; RTOS</span>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-primary-container">&gt;</span>
+<span>ROS2 Robotika Kinematic Nodes &amp; Comms</span>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-primary-container">&gt;</span>
+<span>LiDAR Point-Cloud Volumetric Tracking</span>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-primary-container">&gt;</span>
+<span>DMX512 / ArtNet Programmable Stage Rigs</span>
+</div>
+<div class="flex items-start gap-space-sm bg-surface-container-low p-space-xs">
+<span class="text-primary-container">&gt;</span>
+<span>CNC Milling &amp; 3D Rapid Print Prototyping</span>
+</div>
+</div>
+</div>
+<!-- Benchmarks Box -->
+<div class="bg-surface-container-lowest p-space-md flex flex-col gap-space-xs">
+<span class="font-code text-label-caps text-primary-fixed uppercase tracking-wider">[BENCHMARK_PROOFS]</span>
+<div class="flex items-baseline justify-between font-code text-body-sm text-on-surface pt-space-xs">
+<span class="text-on-surface-variant">Laser Mapping:</span>
+<span class="text-primary-container font-semibold">&lt;1mm calibration drift</span>
+</div>
+<div class="flex items-baseline justify-between font-code text-body-sm text-on-surface">
+<span class="text-on-surface-variant">Bus Stability:</span>
+<span class="text-primary font-semibold">RS485 industrial isolation</span>
+</div>
+<div class="flex items-baseline justify-between font-code text-body-sm text-on-surface">
+<span class="text-on-surface-variant">Firmware Cycle:</span>
+<span class="text-secondary font-semibold">1,000Hz poll rate</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 03: VISUAL LAB ARCHIVE GALLERY -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-container-lowest">
+<div class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<span class="font-code text-label-caps text-outline uppercase tracking-wider">// HARDWARE_FIELD_DOCUMENTATION // ARCHIVE_2025</span>
+<span class="font-code text-label-caps text-primary-container">[AUTHENTIC FIELD WORK]</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Visual Item 01: Physical Hardware Rig -->
+<div class="md:col-span-7 relative group overflow-hidden bg-surface-container-low min-h-[380px] flex flex-col justify-end p-space-lg">
+<div class="absolute inset-0 bg-cover bg-center brightness-75 group-hover:scale-105 transition-transform duration-300" data-alt="Close-up photograph of a cybernetic hardware prototyping bench in a dark technology lab. Features exposed green circuit boards with glowing LEDs, an ESP32 microcontroller with coiled multicolored jumper wires, precision soldering tools, and an oscilloscope display screen showing green telemetry waveforms in deep obsidian shadow with acid-lime ambient reflections." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA7369TUNOx57w_qV9dvgzAybOYY9aFrbRe7JQJyzEXMju9i6dA2nRrvRV0lT53ZSv2eYO6VbrS0jH8NWtMuLrEwlV_JXXiIhU1V2hwXAAK6HddvJhqFmHL_p1JpBhtwzc68HBmfs6Sentmar4BNBg0_xsf8MHVKlhX_Yfp1HeskCcrZohjUVoGlr44oq8aX8GfcpX_HETBIfL-cgwIpDRBx4YUfJSgwRbd7dld4JI')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-surface/60 to-transparent"></div>
+<div class="relative z-10 flex flex-col gap-space-xs">
+<span class="font-code text-label-caps text-primary-fixed">FIELD_RIG #410 // PHYSICAL SENSING</span>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">SPATIAL LIDAR &amp; TELEMETRY INTERFACE</h4>
+<p class="font-code text-body-sm text-on-surface-variant">Custom RS485 communication junction reading 360-degree point clouds for architectural scale installations.</p>
+</div>
+</div>
+<!-- Visual Item 02: Spasial Interactive Screen -->
+<div class="md:col-span-5 relative group overflow-hidden bg-surface-container-low min-h-[380px] flex flex-col justify-end p-space-lg">
+<div class="absolute inset-0 bg-cover bg-center brightness-75 group-hover:scale-105 transition-transform duration-300" data-alt="Avant-garde gallery exhibition space at night featuring a colossal floor-to-ceiling projection mapping installation. Intricate generative geometric wireframe patterns and dynamic electric lime and violet particle clouds cascade across architectural columns, photographed from a sharp angled perspective with young creative technologists testing gesture controls." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBK63d_AnE33QHw9EuPH3VYJg5sGuwhLOLRKWMbUqV2BspK2NDXy1WeRjdMwRlLmwBmvbR3qaaxOzMZpBYQadMC5F3tZm9r_JZqsiKVyypoIy_gMY_2W3IjpP-xagirQYoRJ6l_sgQzQof1cFa-L0yjyIux7H_H4scMqakg_Hx1hrg4IBye-ItiD8p9_2JEfuKOOqyD4nlgwf5HYZxILDxKPdQAcGTElVL19W6FYD0')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-surface/60 to-transparent"></div>
+<div class="relative z-10 flex flex-col gap-space-xs">
+<span class="font-code text-label-caps text-secondary">PROJECTION MATRIX // GLSL ENGINE</span>
+<h4 class="font-headline-sm text-headline-sm text-primary uppercase">KINETIC VOLUMETRIC DISPATCH</h4>
+<p class="font-code text-body-sm text-on-surface-variant">Zero-drop 60fps cluster rendering deployed inside 2,000 sq ft industrial venue.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 04: WORKFLOW & METHODOLOGY (4-STAGE PIPELINE) -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-3xl bg-background">
+<div class="flex flex-col gap-space-2xl">
+<!-- Section Title & Telemetry Header -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs font-code text-label-caps text-primary-container">
+<span>// EXECUTION_LOGIC</span>
+<span class="text-outline">/</span>
+<span>SYSTEMATIC_AGILITY</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary uppercase tracking-tight">
+            THE 4-STAGE RAPID DEPLOYMENT PIPELINE
+          </h2>
+</div>
+<p class="font-code text-body-sm text-on-surface-variant max-w-md">
+          Tanpa proses birokratis yang berbelit. Kami mengubah hipotesis interaktif menjadi penerapan perangkat keras yang tangguh dalam siklus produksi 14 hari.
+        </p>
+</div>
+<!-- 4 Horizontal Step Panels -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- STAGE 01 -->
+<div class="flex flex-col justify-between bg-surface-container p-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm py-space-xs">
+<span class="font-code text-label-caps text-primary-fixed">STAGE_01</span>
+<span class="font-code text-label-caps text-outline">DAY 01–03</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary uppercase">
+              RADICAL PROTOTYPING
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Breadboards, quick-and-dirty GLSL shaders, paper schematics, and raw WebAudio synthesis loops. Finding the tactile spark without premature optimization.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-lg flex flex-col gap-space-xs">
+<span class="font-code text-label-caps uppercase text-outline">OUTPUT ARTIFACT:</span>
+<div class="flex items-center gap-space-xs font-code text-body-sm text-primary-fixed">
+<span class="material-symbols-outlined text-[16px]">terminal</span>
+<span>PROOF_OF_CONCEPT_v0.1</span>
+</div>
+</div>
+</div>
+<!-- STAGE 02 -->
+<div class="flex flex-col justify-between bg-surface-container p-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm py-space-xs">
+<span class="font-code text-label-caps text-secondary">STAGE_02</span>
+<span class="font-code text-label-caps text-outline">DAY 04–10</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary uppercase">
+              INTERACTIVE CALIBRATION
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Multi-sensor fusion, ergonomic gesture tuning, WebGPU buffer caching, and microsecond latency profiling under active user testing.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-lg flex flex-col gap-space-xs">
+<span class="font-code text-label-caps uppercase text-outline">OUTPUT ARTIFACT:</span>
+<div class="flex items-center gap-space-xs font-code text-body-sm text-secondary">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+<span>CALIBRATED_RUNTIME_ALPHA</span>
+</div>
+</div>
+</div>
+<!-- STAGE 03 -->
+<div class="flex flex-col justify-between bg-surface-container p-space-lg">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between bg-surface-container-low px-space-sm py-space-xs">
+<span class="font-code text-label-caps text-primary-fixed">STAGE_03</span>
+<span class="font-code text-label-caps text-outline">DAY 11–14</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary uppercase">
+              HARDENING &amp; STRESS-TEST
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Continuous 72-hour thermal and network burn-in runs, simulated power cuts, offline fallback state machines, and thermal throttling mitigations.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-lg flex flex-col gap-space-xs">
+<span class="font-code text-label-caps uppercase text-outline">OUTPUT ARTIFACT:</span>
+<div class="flex items-center gap-space-xs font-code text-body-sm text-primary-fixed">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>HARDENED_BUILD_CANDIDATE</span>
+</div>
+</div>
+</div>
+<!-- STAGE 04 -->
+<div class="flex flex-col justify-between bg-surface-container-high p-space-lg shadow-[4px_4px_0px_0px_#aff755]">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between bg-surface-container-lowest px-space-sm py-space-xs">
+<span class="font-code text-label-caps text-primary-container">STAGE_04</span>
+<span class="font-code text-label-caps text-primary-fixed">DISPATCH</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary uppercase">
+              DEPLOY &amp; DISPATCH
+            </h3>
+<p class="font-body-md text-body-md text-on-surface">
+              On-site spatial rigging, truss mounting, multi-projector alignment, public launch, and comprehensive sumber terbuka GitHub release.
+            </p>
+</div>
+<div class="pt-space-lg mt-space-lg flex flex-col gap-space-xs">
+<span class="font-code text-label-caps uppercase text-on-surface-variant">OUTPUT ARTIFACT:</span>
+<div class="flex items-center gap-space-xs font-code text-body-sm text-primary font-bold">
+<span class="material-symbols-outlined text-[16px] text-primary-container">rocket_launch</span>
+<span>PUBLIC_RELEASE // REPO_OPEN</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 05: LAB HARDWARE & TOOLING TELEMETRY (INTERACTIVE FILTER BADGE CLOUD) -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-3xl bg-surface-container-lowest" id="telemetry-section">
+<div class="flex flex-col gap-space-xl">
+<!-- Section Intro & Filter Toggles -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-code text-label-caps uppercase text-primary-container">// TOOLING &amp; PROTOCOL TELEMETRY</span>
+<h2 class="font-headline-md text-headline-md text-primary uppercase tracking-tight">LAB STACK CATALOG</h2>
+</div>
+<!-- Category Filters -->
+<div class="flex flex-wrap items-center gap-space-xs font-code text-label-caps" id="filter-buttons">
+<button class="px-space-md py-1.5 bg-primary-container text-on-primary font-semibold transition-colors" data-cat="all">ALL_SYSTEMS [24]</button>
+<button class="px-space-md py-1.5 bg-surface-container text-on-surface hover:text-primary-container transition-colors" data-cat="shaders">SHADERS / GLSL</button>
+<button class="px-space-md py-1.5 bg-surface-container text-on-surface hover:text-primary-container transition-colors" data-cat="mcu">MICROCONTROLLERS</button>
+<button class="px-space-md py-1.5 bg-surface-container text-on-surface hover:text-primary-container transition-colors" data-cat="audio">AUDIO DSP</button>
+<button class="px-space-md py-1.5 bg-surface-container text-on-surface hover:text-primary-container transition-colors" data-cat="protocols">PROTOCOLS</button>
+<button class="px-space-md py-1.5 bg-surface-container text-on-surface hover:text-primary-container transition-colors" data-cat="frameworks">FRAMEWORKS</button>
+</div>
+</div>
+<!-- Badge Cloud Display Matrix -->
+<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-space-sm" id="badge-container">
+<!-- SHADERS -->
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="shaders">
+<span class="font-code text-label-caps text-outline">SHADERS</span>
+<span class="font-code text-body-md text-primary font-bold">WGSL Komputasi</span>
+<span class="font-code text-body-sm text-primary-container">[W3C STANDARD]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="shaders">
+<span class="font-code text-label-caps text-outline">SHADERS</span>
+<span class="font-code text-body-md text-primary font-bold">GLSL Frag/Vert</span>
+<span class="font-code text-body-sm text-primary-container">[RAYMARCHING]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="shaders">
+<span class="font-code text-label-caps text-outline">SHADERS</span>
+<span class="font-code text-body-md text-primary font-bold">TouchDesigner</span>
+<span class="font-code text-body-sm text-primary-container">[REALTIME_TOPS]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="shaders">
+<span class="font-code text-label-caps text-outline">SHADERS</span>
+<span class="font-code text-body-md text-primary font-bold">Post-FX Passes</span>
+<span class="font-code text-body-sm text-primary-container">[CHROMATIC/DITHER]</span>
+</div>
+<!-- MICROCONTROLLERS -->
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="mcu">
+<span class="font-code text-label-caps text-outline">MCU / EMBEDDED</span>
+<span class="font-code text-body-md text-secondary font-bold">ESP32-S3 Dual</span>
+<span class="font-code text-body-sm text-on-surface-variant">[240MHz WI-FI/BLE]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="mcu">
+<span class="font-code text-label-caps text-outline">MCU / EMBEDDED</span>
+<span class="font-code text-body-md text-secondary font-bold">Teensy 4.1</span>
+<span class="font-code text-body-sm text-on-surface-variant">[600MHz AUDIO-DSP]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="mcu">
+<span class="font-code text-label-caps text-outline">MCU / EMBEDDED</span>
+<span class="font-code text-body-md text-secondary font-bold">RP2040 Pico</span>
+<span class="font-code text-body-sm text-on-surface-variant">[PIO STATE MACHINES]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="mcu">
+<span class="font-code text-label-caps text-outline">MCU / EMBEDDED</span>
+<span class="font-code text-body-md text-secondary font-bold">ROS2 Micro-XRCE</span>
+<span class="font-code text-body-sm text-on-surface-variant">[ROBOTIC NODES]</span>
+</div>
+<!-- AUDIO DSP -->
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="audio">
+<span class="font-code text-label-caps text-outline">AUDIO DSP</span>
+<span class="font-code text-body-md text-primary font-bold">WebAudio Worklet</span>
+<span class="font-code text-body-sm text-primary-fixed">[ZERO LATENCY JIT]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="audio">
+<span class="font-code text-label-caps text-outline">AUDIO DSP</span>
+<span class="font-code text-body-md text-primary font-bold">Pure Data / LibPd</span>
+<span class="font-code text-body-sm text-primary-fixed">[EMBEDDED SYNTH]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="audio">
+<span class="font-code text-label-caps text-outline">AUDIO DSP</span>
+<span class="font-code text-body-md text-primary font-bold">SuperCollider</span>
+<span class="font-code text-body-sm text-primary-fixed">[ALGORITHMIC SOUND]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="audio">
+<span class="font-code text-label-caps text-outline">AUDIO DSP</span>
+<span class="font-code text-body-md text-primary font-bold">FFT Convolver</span>
+<span class="font-code text-body-sm text-primary-fixed">[SPATIAL REVERB]</span>
+</div>
+<!-- PROTOCOLS -->
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="protocols">
+<span class="font-code text-label-caps text-outline">COMM PROTOCOLS</span>
+<span class="font-code text-body-md text-primary-container font-bold">OSC / UDP</span>
+<span class="font-code text-body-sm text-on-surface">[SUITE 1.0/1.1]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="protocols">
+<span class="font-code text-label-caps text-outline">COMM PROTOCOLS</span>
+<span class="font-code text-body-md text-primary-container font-bold">ArtNet / sACN</span>
+<span class="font-code text-body-sm text-on-surface">[DMX512 OVER IP]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="protocols">
+<span class="font-code text-label-caps text-outline">COMM PROTOCOLS</span>
+<span class="font-code text-body-md text-primary-container font-bold">WebRTC Data</span>
+<span class="font-code text-body-sm text-on-surface">[P2P MESH BROKER]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="protocols">
+<span class="font-code text-label-caps text-outline">COMM PROTOCOLS</span>
+<span class="font-code text-body-md text-primary-container font-bold">MIDI 2.0 / USB</span>
+<span class="font-code text-body-sm text-on-surface">[32-BIT RESOLUTION]</span>
+</div>
+<!-- FRAMEWORKS -->
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="frameworks">
+<span class="font-code text-label-caps text-outline">DEV STACK</span>
+<span class="font-code text-body-md text-secondary font-bold">Three.js / R3F</span>
+<span class="font-code text-body-sm text-on-surface-variant">[DECLARATIVE GL]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="frameworks">
+<span class="font-code text-label-caps text-outline">DEV STACK</span>
+<span class="font-code text-body-md text-secondary font-bold">Next.js 15 SSR</span>
+<span class="font-code text-body-sm text-on-surface-variant">[TURBOPACK / APP]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="frameworks">
+<span class="font-code text-label-caps text-outline">DEV STACK</span>
+<span class="font-code text-body-md text-secondary font-bold">Rust / WASM</span>
+<span class="font-code text-body-sm text-on-surface-variant">[SIMD BINARY PACK]</span>
+</div>
+<div class="badge-item bg-surface-container p-space-md flex flex-col justify-between h-28 hover:bg-surface-container-high transition-colors" data-category="frameworks">
+<span class="font-code text-label-caps text-outline">DEV STACK</span>
+<span class="font-code text-body-md text-secondary font-bold">Tailwind CSS 3/4</span>
+<span class="font-code text-body-sm text-on-surface-variant">[STRICT THEME TOKENS]</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 06: BOTTOM AGGRESSIVE CALL TO ACTION -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-3xl bg-background">
+<div class="relative w-full bg-surface-container p-space-xl lg:p-space-2xl overflow-hidden shadow-[6px_6px_0px_0px_#aff755]">
+<!-- Background Graphic Spec Element (Decorative SVG Pattern) -->
+<svg class="absolute right-0 bottom-0 opacity-10 pointer-events-none w-96 h-96" fill="none" viewbox="0 0 200 200">
+<circle class="text-primary-container" cx="100" cy="100" r="90" stroke="currentColor" stroke-width="1"></circle>
+<circle class="text-primary" cx="100" cy="100" r="60" stroke="currentColor" stroke-width="1"></circle>
+<circle class="text-primary-container" cx="100" cy="100" r="30" stroke="currentColor" stroke-width="1"></circle>
+<line class="text-primary-container" stroke="currentColor" stroke-width="1" x1="0" x2="200" y1="100" y2="100"></line>
+<line class="text-primary-container" stroke="currentColor" stroke-width="1" x1="100" x2="100" y1="0" y2="200"></line>
+</svg>
+<div class="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-space-xl">
+<div class="flex flex-col gap-space-sm max-w-2xl">
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps text-primary-fixed">
+<span class="w-2 h-2 bg-primary-container"></span>
+<span>DISPATCH PROTOCOL // READY FOR ASSIGNMENT</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary uppercase tracking-tighter leading-none">
+            NEED AN EXPERIMENTAL RIG OR COLLABORATIVE PROTOTYPE?
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            From gallery installations to high-concurrency event telemetry, we engineer the physical and digital stack simultaneously.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md shrink-0 w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center bg-primary-container text-on-primary font-code text-body-md uppercase px-space-xl py-space-md tracking-wider font-bold hover:bg-tertiary hover:text-on-tertiary transition-all shadow-[4px_4px_0px_0px_#2a2a2c]" data-path="contact" href="#">
+            DISPATCH THE LAB ↗
+          </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center bg-surface-container-high text-primary font-code text-body-md uppercase px-space-xl py-space-md tracking-wider hover:text-primary-container transition-colors" data-path="projects" href="#">
+            [ VIEW ARCHIVE ]
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Telemetry Tag Filter Script -->
+<script>
+    (function initTelemetryFilter() {
+      const buttons = document.querySelectorAll('#filter-buttons button');
+      const items = document.querySelectorAll('#badge-container .badge-item');
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Update active styles
+          buttons.forEach(b => {
+            b.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold');
+            b.classList.add('bg-surface-container', 'text-on-surface');
+          });
+          btn.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold');
+          btn.classList.remove('bg-surface-container', 'text-on-surface');
+
+          const category = btn.getAttribute('data-cat');
+
+          items.forEach(item => {
+            if (category === 'all' || item.getAttribute('data-category') === category) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest"><div class="w-full px-margin-mobile lg:px-margin py-space-2xl"><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter"><div class="lg:col-span-6 flex flex-col gap-space-sm"><span class="font-code text-body-md text-on-surface tracking-tight uppercase font-semibold">LAB [LAB Siswa] // COLLECTIVE © 2024-2025</span><p class="font-code text-body-sm text-on-surface-variant leading-relaxed max-w-xl">BUILT WITH NEXT &amp; TAILWIND // ZERO CORPORATE SLOP // SEMUA EKSPERIMEN SUMBER TERBUKA // DIRANCANG UNTUK WEB INDEPENDEN</p></div><div class="lg:col-span-6 flex flex-col lg:items-end justify-between gap-space-md"><div class="flex flex-wrap items-center gap-space-md font-code text-body-sm"><a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#">GitHub [gh/collective]</a><a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#">Instagram [@lab.collective]</a><a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#">Discord [server/hackers]</a><a class="text-on-surface-variant hover:text-primary-container transition-colors" href="#">LinkedIn</a></div><div class="flex items-center gap-space-xs font-label-caps text-label-caps text-outline"><span class="w-2 h-2 bg-secondary rounded-none"></span>TERMINAL_STATION // SYS_AUTH_OK</div></div></div></div></footer></body></html>

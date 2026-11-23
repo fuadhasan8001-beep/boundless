@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+
+<html class="dark scroll-smooth" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>[LAB Siswa] // 2025 - Kolektif Teknologi Kreatif</title>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            canvas: "#0B0B0D",
+            surface: "#141419",
+            "surface-subtle": "#1A1A22",
+            "surface-bright": "#22222D",
+            borderLine: "#26262F",
+            limeAccent: "#B6FF5C",
+            "lime-dim": "#84CC28",
+            violetAccent: "#A78BFA",
+            textMain: "#F4F1EA",
+            textMuted: "#9E9EA8",
+          },
+          fontFamily: {
+            sans: ['"Inter"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+<!-- Google Fonts: Space Grotesk, JetBrains Mono, Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      background-color: #0B0B0D;
+      color: #F4F1EA;
+      font-family: 'Inter', sans-serif;
+      selection-background-color: #B6FF5C;
+      selection-color: #0B0B0D;
+    }
+    ::selection {
+      background-color: #B6FF5C;
+      color: #0B0B0D;
+    }
+    .grid-mesh {
+      background-image: linear-gradient(to right, #26262F18 1px, transparent 1px),
+                        linear-gradient(to bottom, #26262F18 1px, transparent 1px);
+      background-size: 32px 32px;
+    }
+    .bracket-border {
+      position: relative;
+    }
+    .bracket-border::before {
+      content: "[";
+      font-family: 'JetBrains Mono', monospace;
+      color: #B6FF5C;
+      margin-right: 0.35rem;
+    }
+    .bracket-border::after {
+      content: "]";
+      font-family: 'JetBrains Mono', monospace;
+      color: #B6FF5C;
+      margin-left: 0.35rem;
+    }
+  </style>
+</head>
+<body class="bg-canvas text-textMain antialiased min-h-screen grid-mesh relative selection:bg-limeAccent selection:text-black">
+<!-- BEGIN: MainHeader -->
+<header class="w-full bg-[#0B0B0D]/90 backdrop-blur-md sticky top-0 z-50 border-b border-borderLine px-4 sm:px-8 py-3.5" data-purpose="navigation-bar">
+<div class="max-w-7xl mx-auto flex items-center justify-between">
+<!-- Monogram / Collective ID -->
+<div class="flex items-center gap-6">
+<a class="flex items-center gap-3 group" href="#">
+<div class="w-8 h-8 rounded border border-borderLine bg-surface flex items-center justify-center font-mono font-bold text-xs text-limeAccent group-hover:border-limeAccent transition-colors">
+            LAB
+          </div>
+<div class="flex flex-col">
+<span class="font-display font-bold text-sm tracking-tight text-textMain group-hover:text-limeAccent transition-colors">
+              [COLLECTIVE] // 2025
+            </span>
+<span class="font-mono text-[10px] text-textMuted tracking-wider uppercase">Creative Tech R&amp;D</span>
+</div>
+</a>
+<!-- Live Telemetry Status Badge -->
+<div class="hidden lg:flex items-center gap-2 px-2.5 py-1 rounded bg-surface border border-borderLine font-mono text-[11px]">
+<span class="w-2 h-2 rounded-full bg-limeAccent animate-pulse"></span>
+<span class="text-limeAccent font-medium">AKTIF</span>
+<span class="text-borderLine">|</span>
+<span class="text-textMuted">LAB BUKA 22:00-04:00</span>
+</div>
+</div>
+<!-- Desktop Nav -->
+<nav class="hidden md:flex items-center gap-7 text-xs font-mono tracking-wider text-textMuted uppercase">
+<a class="hover:text-limeAccent transition-colors" href="#about">// 01_TENTANG</a>
+<a class="hover:text-limeAccent transition-colors" href="#people">// 02_ANGGOTA</a>
+<a class="hover:text-limeAccent transition-colors" href="#projects">// 03_PROYEK</a>
+<a class="hover:text-limeAccent transition-colors" href="#expertise">// 04_KEAHLIAN</a>
+<a class="hover:text-limeAccent transition-colors" href="#contact">// 05_KONTAK</a>
+</nav>
+<!-- Right Action CTA -->
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-2 px-4 py-2 rounded bg-limeAccent text-black font-mono font-bold text-xs tracking-wider uppercase hover:bg-white transition-all shadow-[0_0_20px_rgba(182,255,92,0.25)]" href="#contact">
+<span>HUBUNGI_LAB</span>
+<span class="text-[10px]">↗</span>
+</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection -->
+<section class="relative pt-12 pb-20 sm:pb-28 px-4 sm:px-8 border-b border-borderLine" data-purpose="hero-section">
+<div class="max-w-7xl mx-auto">
+<!-- Top Lab Header Strip -->
+<div class="flex flex-wrap items-center justify-between gap-4 mb-8 pb-4 border-b border-borderLine font-mono text-xs text-textMuted">
+<div class="flex items-center gap-3">
+<span class="px-2 py-0.5 rounded bg-surface border border-borderLine text-limeAccent font-semibold">[STUDENT-LED CREATIVE COLLECTIVE // EST. 2024]</span>
+<span class="hidden sm:inline text-textMuted font-mono">NODE_ID: LAB_IDN_88</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs">LOC: 07°16'S 112°47'E</span>
+<span class="text-limeAccent text-[11px] font-mono">STATUS: HIGH_THROUGHPUT</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+<!-- Hero Editorial Column -->
+<div class="lg:col-span-6 space-y-6">
+<h1 class="text-4xl sm:text-6xl xl:text-7xl font-display font-bold leading-[0.98] tracking-[-0.03em] text-textMain uppercase">
+            KAMI TAK <br/>
+            HANYA BELAJAR. <br/>
+<span class="text-limeAccent inline-block relative underline decoration-limeAccent/40 decoration-4 underline-offset-8">
+              KAMI BERKARYA.
+            </span>
+</h1>
+<p class="text-base sm:text-lg text-textMuted font-normal leading-relaxed max-w-xl">
+            Kami adalah kolektif teknologi kreatif independen yang menghubungkan perangkat lunak, ruang interaktif, desain komputasional, dan eksperimen perangkat keras. Kami berfokus pada karya nyata.
+          </p>
+<!-- Dual CTAs -->
+<div class="pt-2 flex flex-wrap items-center gap-4 font-mono text-xs">
+<a class="px-6 py-3.5 rounded bg-limeAccent text-black font-bold uppercase tracking-wider hover:bg-white transition-all shadow-[0_0_25px_rgba(182,255,92,0.3)] flex items-center gap-2" href="#projects">
+<span>JELAJAHI PROYEK</span>
+<span>↓</span>
+</a>
+<a class="px-6 py-3.5 rounded border border-borderLine bg-surface text-textMain font-medium uppercase tracking-wider hover:border-limeAccent hover:text-limeAccent transition-all flex items-center gap-2" href="#people">
+<span>MEET TIM KAMI</span>
+<span class="text-limeAccent">[05]</span>
+</a>
+</div>
+<!-- Bottom Telemetry Terminal Bar -->
+<div class="p-3.5 rounded bg-surface border border-borderLine font-mono text-xs flex items-center justify-between text-textMuted">
+<div class="flex items-center gap-2.5">
+<span class="w-1.5 h-1.5 rounded-full bg-limeAccent"></span>
+<span class="text-textMain font-medium">LATEST RUN:</span>
+<span class="truncate max-w-[220px] sm:max-w-none text-textMuted">AURA_SPATIAL_V2 compiled in 412ms</span>
+</div>
+<span class="text-violetAccent hidden sm:inline">GLSL / SHADER_OK</span>
+</div>
+</div>
+<!-- Hero Graphic / Documentation Composition -->
+<div class="lg:col-span-6 relative">
+<div class="relative rounded-lg overflow-hidden border border-borderLine bg-surface shadow-2xl group">
+<!-- Terminal Header Chrome -->
+<div class="px-4 py-2.5 bg-surface-subtle border-b border-borderLine flex items-center justify-between font-mono text-xs text-textMuted">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]/80"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#27C93F]/80"></span>
+<span class="ml-2 text-textMuted text-[11px]">LAB_DOCUMENTATION // ARCHIVE_024</span>
+</div>
+<span class="text-limeAccent text-[11px] font-bold">PHYSICAL_RIG_TESTING</span>
+</div>
+<!-- Lab Exhibition Visual -->
+<div class="relative aspect-[16/10] overflow-hidden bg-black">
+<img alt="Collective members in dark installation gallery testing tactile computing interface" class="w-full h-full object-cover grayscale-[20%] contrast-110 group-hover:scale-[1.02] transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/ALJJyrDqWWSoYTf05D4kDAOItPxzb8Kg4QhW910HXR72ShnWTmiFe0hMhjVPVLfKVb_xL6k1n_RdvVNAK5OopNSBeK6CLV6dQqqp6dIsenwX2V_BUx13C-yfs2xARGgWhUgTj2UktUogiNoV2DLt2nrsBxLOB4sdkA0Du_7GXWDfHSIO8i_4t6cEBxVjvyaeIJ4OeOG0B_mFO0OIQHucCwEXg_cD6rpAIXVnykDKfsusziYg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-canvas via-transparent to-transparent opacity-80"></div>
+<!-- Bottom Visual Overlay -->
+<div class="absolute bottom-4 left-4 right-4 flex items-end justify-between font-mono">
+<div class="bg-canvas/90 backdrop-blur-md p-3 rounded border border-borderLine max-w-sm">
+<div class="text-[10px] text-limeAccent font-bold uppercase tracking-wider">PROJECT HYPER_SURFACE</div>
+<div class="text-xs text-textMain font-sans mt-0.5">Multi-layer interactive projection rig with LiDAR tracking</div>
+</div>
+<div class="text-right text-[11px] font-mono text-textMuted hidden sm:block bg-canvas/80 px-2 py-1 rounded border border-borderLine">
+                  FPS: 60.0 // LATENCY: &lt;14ms
+                </div>
+</div>
+</div>
+</div>
+<!-- Decorative Corner Accents -->
+<div class="absolute -top-2 -left-2 w-4 h-4 border-t-2 border-l-2 border-limeAccent pointer-events-none"></div>
+<div class="absolute -bottom-2 -right-2 w-4 h-4 border-b-2 border-r-2 border-limeAccent pointer-events-none"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: AboutManifestoSection -->
+<section class="py-20 sm:py-28 px-4 sm:px-8 border-b border-borderLine" data-purpose="collective-manifesto" id="about">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-center gap-3 mb-6">
+<span class="font-mono text-xs text-limeAccent uppercase tracking-widest">// 01_MANIFESTO</span>
+<div class="h-px bg-borderLine flex-1"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+<!-- Left Editorial Statement -->
+<div class="lg:col-span-7 space-y-6">
+<h2 class="text-3xl sm:text-5xl font-display font-bold text-textMain tracking-[-0.03em] uppercase leading-tight">
+            DIFFERENT MINDS. <br/>
+<span class="text-limeAccent">SATU TUJUAN.</span>
+</h2>
+<div class="space-y-4 text-textMuted text-base sm:text-lg leading-relaxed">
+<p>
+              Kami mendirikan kolektif ini karena kurikulum universitas bergerak terlalu lambat menghadapi perubahan pada antarmuka digital, kecerdasan mesin, dan ruang fisik. 
+            </p>
+<p>
+              By combining frontend architects, systems hackers, sound designers, and hardware tinkerers under one roof, we test experimental ideas by turning them into functional code, deployable installations, and production-grade tools.
+            </p>
+</div>
+<div class="pt-4 flex flex-wrap gap-2 font-mono text-xs">
+<span class="px-3 py-1.5 rounded bg-surface border border-borderLine text-textMain">#CREATIVE_TECH</span>
+<span class="px-3 py-1.5 rounded bg-surface border border-borderLine text-textMain">#SPATIAL_COMPUTING</span>
+<span class="px-3 py-1.5 rounded bg-surface border border-borderLine text-limeAccent">#RAW_EXECUTION</span>
+<span class="px-3 py-1.5 rounded bg-surface border border-borderLine text-violetAccent">#OPEN_SOURCE</span>
+</div>
+</div>
+<!-- Right Student Metrics Grid -->
+<div class="lg:col-span-5 grid grid-cols-2 gap-4">
+<div class="p-6 rounded bg-surface border border-borderLine flex flex-col justify-between hover:border-limeAccent transition-colors">
+<span class="font-mono text-xs text-textMuted uppercase">// COMMITS</span>
+<div class="my-4">
+<span class="font-display font-bold text-3xl sm:text-4xl text-textMain">24.6K+</span>
+<p class="text-xs text-textMuted mt-1">Lines of Production Code</p>
+</div>
+<span class="font-mono text-[10px] text-limeAccent">GIT_REPOS_ACTIVE</span>
+</div>
+<div class="p-6 rounded bg-surface border border-borderLine flex flex-col justify-between hover:border-limeAccent transition-colors">
+<span class="font-mono text-xs text-textMuted uppercase">// BUILDS</span>
+<div class="my-4">
+<span class="font-display font-bold text-3xl sm:text-4xl text-limeAccent">08</span>
+<p class="text-xs text-textMuted mt-1">Experimental Prototypes</p>
+</div>
+<span class="font-mono text-[10px] text-textMuted">HARDWARE + SOFTWARE</span>
+</div>
+<div class="p-6 rounded bg-surface border border-borderLine flex flex-col justify-between hover:border-limeAccent transition-colors">
+<span class="font-mono text-xs text-textMuted uppercase">// FUEL</span>
+<div class="my-4">
+<span class="font-display font-bold text-3xl sm:text-4xl text-textMain">140+</span>
+<p class="text-xs text-textMuted mt-1">Liters Cold Brew</p>
+</div>
+<span class="font-mono text-[10px] text-violetAccent">2AM_BRAINSTORMS</span>
+</div>
+<div class="p-6 rounded bg-surface border border-borderLine flex flex-col justify-between hover:border-limeAccent transition-colors">
+<span class="font-mono text-xs text-textMuted uppercase">// ETHOS</span>
+<div class="my-4">
+<span class="font-display font-bold text-3xl sm:text-4xl text-white">00</span>
+<p class="text-xs text-textMuted mt-1">Corporate Overhead</p>
+</div>
+<span class="font-mono text-[10px] text-limeAccent">PURE_AUTONOMY</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutManifestoSection -->
+<!-- BEGIN: OurPeopleSection -->
+<section class="py-20 sm:py-28 px-4 sm:px-8 border-b border-borderLine" data-purpose="team-roster" id="people">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+<div>
+<span class="font-mono text-xs text-limeAccent uppercase tracking-widest">// 02_ROSTER</span>
+<h2 class="text-3xl sm:text-5xl font-display font-bold text-textMain tracking-[-0.03em] uppercase mt-2">
+            PARA PERANCANG <span class="text-textMuted font-mono text-xl">[05]</span>
+</h2>
+</div>
+<p class="font-mono text-xs text-textMuted max-w-sm">
+          Interdisciplinary students uniting software architecture, physical computing, and graphic design into one single squad.
+        </p>
+</div>
+<!-- 5 Team Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Member 01 -->
+<div class="rounded-lg bg-surface border border-borderLine p-6 flex flex-col justify-between hover:border-limeAccent transition-all group">
+<div>
+<div class="flex items-center justify-between font-mono text-xs text-textMuted pb-4 border-b border-borderLine">
+<span class="text-limeAccent font-bold">01 // SYS_LEAD</span>
+<span>@rafi_na</span>
+</div>
+<div class="mt-5">
+<h3 class="text-xl font-display font-bold text-textMain group-hover:text-limeAccent transition-colors">
+                Mochammad Rafi Nur Alfan
+              </h3>
+<p class="text-xs font-mono text-limeAccent mt-1">Lead Full-Stack &amp; Systems</p>
+<p class="text-xs text-textMuted mt-3 leading-relaxed">
+                Specialized in distributed microservices, real-time WebSockets synchronization, and cloud architecture for live installations.
+              </p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-borderLine flex items-center justify-between font-mono text-[11px]">
+<span class="text-textMuted">Go, Rust, Docker, Node</span>
+<a class="text-textMain hover:text-limeAccent" href="https://github.com" target="_blank">gh://rafialfan ↗</a>
+</div>
+</div>
+<!-- Member 02 -->
+<div class="rounded-lg bg-surface border border-borderLine p-6 flex flex-col justify-between hover:border-limeAccent transition-all group">
+<div>
+<div class="flex items-center justify-between font-mono text-xs text-textMuted pb-4 border-b border-borderLine">
+<span class="text-limeAccent font-bold">02 // DSP_BACKEND</span>
+<span>@ragasyah</span>
+</div>
+<div class="mt-5">
+<h3 class="text-xl font-display font-bold text-textMain group-hover:text-limeAccent transition-colors">
+                Raga Syahputra Arifin
+              </h3>
+<p class="text-xs font-mono text-violetAccent mt-1">Distributed Backend &amp; DSP</p>
+<p class="text-xs text-textMuted mt-3 leading-relaxed">
+                Membangun alur analisis audio, Transformasi Fourier Cepat, dan mesin siaran peristiwa waktu nyata berfrekuensi tinggi.
+              </p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-borderLine flex items-center justify-between font-mono text-[11px]">
+<span class="text-textMuted">C++, WebAudio, Python, Kafka</span>
+<a class="text-textMain hover:text-limeAccent" href="https://github.com" target="_blank">gh://ragasyah ↗</a>
+</div>
+</div>
+<!-- Member 03 -->
+<div class="rounded-lg bg-surface border border-borderLine p-6 flex flex-col justify-between hover:border-limeAccent transition-all group">
+<div>
+<div class="flex items-center justify-between font-mono text-xs text-textMuted pb-4 border-b border-borderLine">
+<span class="text-limeAccent font-bold">03 // DESIGN_UX</span>
+<span>@ranianur</span>
+</div>
+<div class="mt-5">
+<h3 class="text-xl font-display font-bold text-textMain group-hover:text-limeAccent transition-colors">
+                Rania Nurillah
+              </h3>
+<p class="text-xs font-mono text-limeAccent mt-1">UI/UX &amp; Creative Frontend</p>
+<p class="text-xs text-textMuted mt-3 leading-relaxed">
+                Obsessed with micro-interactions, brutalist design systems, accessibility in dark environments, and responsive layouts.
+              </p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-borderLine flex items-center justify-between font-mono text-[11px]">
+<span class="text-textMuted">Figma, Tailwind, Next.js, Framer</span>
+<a class="text-textMain hover:text-limeAccent" href="https://github.com" target="_blank">ig://rania.ux ↗</a>
+</div>
+</div>
+<!-- Member 04: Active Highlight Card with Photo -->
+<div class="rounded-lg bg-surface-subtle border-2 border-limeAccent p-6 flex flex-col justify-between shadow-[0_0_30px_rgba(182,255,92,0.15)] group relative md:col-span-2 lg:col-span-2">
+<div class="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+<div class="sm:col-span-5 aspect-square rounded overflow-hidden border border-borderLine bg-black relative">
+<img alt="Sevia Dwi Novitasari solder testing in hardware lab" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ALJJyrD_hX3inm0naknjTKTaT-CoM-BI22hilQz39oYWgRMGGpG7gqDjlESkNCI_jlpt4JkVyODA5D7nD2R-8eR-jIAnS6RAIIcK32fUkdWKdlTKkNEjrGCOT8XL7fMPjwvFRdL6eTo1-c24_BR0Rg0PUtJmRRCg09MMa5MHgUhlIoT_GT2krG7R6LN-YGUe9AC5dzte0oRUoigaxUBIqIUt30EJ-BKoirnRahKWrGfb-ng"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 bg-black/80 rounded font-mono text-[10px] text-limeAccent border border-limeAccent/30">
+                LAB_DEV // LIVE
+              </div>
+</div>
+<div class="sm:col-span-7 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between font-mono text-xs pb-2 border-b border-borderLine">
+<span class="text-limeAccent font-bold">04 // INTERACTION_WEBGL</span>
+<span class="text-textMuted">@seviadwi</span>
+</div>
+<h3 class="text-2xl font-display font-bold text-textMain mt-3">
+                  Sevia Dwi Novitasari
+                </h3>
+<p class="text-xs font-mono text-limeAccent mt-1">Insinyur Interaksi &amp; WebGL</p>
+<p class="text-xs text-textMuted mt-3 leading-relaxed">
+                  Crafting generative shaders, particle dynamics, and reactive 3D graphics that convert physical sound into visual typography.
+                </p>
+</div>
+<div class="mt-6 pt-3 border-t border-borderLine flex flex-wrap items-center justify-between gap-2 font-mono text-[11px]">
+<span class="text-textMuted">Three.js, GLSL, WebGPU, TouchDesigner</span>
+<a class="text-limeAccent hover:underline" href="https://github.com" target="_blank">gh://seviadwi ↗</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Member 05 -->
+<div class="rounded-lg bg-surface border border-borderLine p-6 flex flex-col justify-between hover:border-limeAccent transition-all group">
+<div>
+<div class="flex items-center justify-between font-mono text-xs text-textMuted pb-4 border-b border-borderLine">
+<span class="text-limeAccent font-bold">05 // HARDWARE_EMBEDDED</span>
+<span>@zhefitra</span>
+</div>
+<div class="mt-5">
+<h3 class="text-xl font-display font-bold text-textMain group-hover:text-limeAccent transition-colors">
+                Zhefitra Ananda Wijaya
+              </h3>
+<p class="text-xs font-mono text-violetAccent mt-1">Hardware &amp; Komputasi Fisik</p>
+<p class="text-xs text-textMuted mt-3 leading-relaxed">
+                Tinkering with microcontrollers, ultrasonic and LiDAR sensor rigs, CNC cut frames, and projection-mapping hardware arrays.
+              </p>
+</div>
+</div>
+<div class="mt-6 pt-4 border-t border-borderLine flex items-center justify-between font-mono text-[11px]">
+<span class="text-textMuted">ESP32, Arduino, I2C, ROS2</span>
+<a class="text-textMain hover:text-limeAccent" href="https://github.com" target="_blank">gh://zhefitra ↗</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: OurPeopleSection -->
+<!-- BEGIN: ProjectPortfolioSection -->
+<section class="py-20 sm:py-28 px-4 sm:px-8 border-b border-borderLine" data-purpose="portfolio-showcase" id="projects">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
+<div>
+<span class="font-mono text-xs text-limeAccent uppercase tracking-widest">// 03_FEATURED_BUILDS</span>
+<h2 class="text-3xl sm:text-5xl font-display font-bold text-textMain tracking-[-0.03em] uppercase mt-2">
+            EKSPERIMEN PILIHAN
+          </h2>
+</div>
+<p class="font-mono text-xs text-textMuted max-w-sm">
+          Bukti konsep yang berfungsi, perangkat lunak spasial, dan paket sumber terbuka yang kami buat di sesi lab.
+        </p>
+</div>
+<!-- Project 1: Highlight with Image 13 (AURA) -->
+<div class="rounded-lg bg-surface border border-borderLine overflow-hidden mb-12 hover:border-limeAccent transition-colors">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<div class="lg:col-span-7 bg-black p-2 border-b lg:border-b-0 lg:border-r border-borderLine">
+<div class="relative aspect-video rounded overflow-hidden">
+<img alt="Aura Generative Sound and Spasial Visualizer WebGL user interface" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ALJJyrCQC4-OVekCdkiUXlDTZvD6opLjnkqmaIibZYX27pQRBHOF_LuhS-7cY_bjd2kpNWBzmluAWTo0bLJnuwPqRjtxH-GyMQ-LAGw2qy_OECFSiHKg18ndKTVyrtCAGUwBapZ2yr-XLJ08HBp669nkzu9qPaPVOIxYtmdvr0OkID4AFeiBKr45do6F2iuX3QIRCajk8QlXRMPPDTN9Dg3F2wPS1ewK2wm4BZtRsGigzduU"/>
+</div>
+</div>
+<div class="lg:col-span-5 p-6 sm:p-8 flex flex-col justify-between space-y-6">
+<div>
+<div class="flex items-center justify-between font-mono text-xs text-textMuted mb-3">
+<span class="text-limeAccent font-bold">PROJECT_01 // 2025</span>
+<span>OPEN SOURCE</span>
+</div>
+<h3 class="text-2xl sm:text-3xl font-display font-bold text-textMain tracking-tight">
+                AURA: Generative Sound &amp; Spasial Visualizer
+              </h3>
+<p class="text-xs sm:text-sm text-textMuted mt-4 leading-relaxed">
+                Browser-native WebGL audio visualizer mapping microphone input and multi-track frequencies into kinetic typography meshes and reactive particle waves at steady 60fps.
+              </p>
+<div class="mt-6 flex flex-wrap gap-2 font-mono text-[11px]">
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine text-textMain">WebGL</span>
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine text-textMain">Three.js</span>
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine text-textMain">Web Audio API</span>
+<span class="px-2.5 py-1 rounded bg-canvas border border-borderLine text-limeAccent">Shader GLSL</span>
+</div>
+</div>
+<div class="pt-6 border-t border-borderLine flex items-center justify-between font-mono text-xs">
+<a class="text-limeAccent hover:text-white font-bold flex items-center gap-1.5" href="#">
+<span>LUNCURKAN_INTERAKTIF</span>
+<span>↗</span>
+</a>
+<a class="text-textMuted hover:text-textMain" href="#">
+                CASE_STUDY [04 MIN READ]
+              </a>
+</div>
+</div>
+</div>
+</div>
+<!-- Projects 2 & 3 Split Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Project 2: HYPER_SURFACE -->
+<div class="rounded-lg bg-surface border border-borderLine p-6 sm:p-8 flex flex-col justify-between hover:border-limeAccent transition-all group">
+<div>
+<div class="flex items-center justify-between font-mono text-xs text-textMuted mb-4">
+<span class="text-violetAccent font-bold">PROJECT_02 // HARDWARE</span>
+<span>PHYSICAL LAB</span>
+</div>
+<div class="aspect-[16/9] rounded bg-canvas border border-borderLine mb-6 overflow-hidden relative">
+<img alt="Tactile interactive rig gallery installation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90" src="https://lh3.googleusercontent.com/aida/ALJJyrDqWWSoYTf05D4kDAOItPxzb8Kg4QhW910HXR72ShnWTmiFe0hMhjVPVLfKVb_xL6k1n_RdvVNAK5OopNSBeK6CLV6dQqqp6dIsenwX2V_BUx13C-yfs2xARGgWhUgTj2UktUogiNoV2DLt2nrsBxLOB4sdkA0Du_7GXWDfHSIO8i_4t6cEBxVjvyaeIJ4OeOG0B_mFO0OIQHucCwEXg_cD6rpAIXVnykDKfsusziYg"/>
+<div class="absolute inset-0 bg-canvas/40"></div>
+<div class="absolute bottom-3 left-3 font-mono text-[10px] bg-canvas/90 px-2 py-1 rounded text-limeAccent border border-borderLine">
+                LIDAR_POINT_CLOUD: 1200_NODES
+              </div>
+</div>
+<h3 class="text-xl sm:text-2xl font-display font-bold text-textMain group-hover:text-limeAccent transition-colors">
+              HYPER_SURFACE: Tactile Interactive Rig
+            </h3>
+<p class="text-xs sm:text-sm text-textMuted mt-3 leading-relaxed">
+              Transparent multi-layered projection screen with real-time gesture tracking using short-range LiDAR sensors and custom TouchDesigner OSC networks.
+            </p>
+<div class="mt-5 flex flex-wrap gap-2 font-mono text-[11px]">
+<span class="px-2 py-1 rounded bg-canvas border border-borderLine text-textMuted">TouchDesigner</span>
+<span class="px-2 py-1 rounded bg-canvas border border-borderLine text-textMuted">LiDAR</span>
+<span class="px-2 py-1 rounded bg-canvas border border-borderLine text-textMuted">ESP32</span>
+<span class="px-2 py-1 rounded bg-canvas border border-borderLine text-textMuted">OSC Protocol</span>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-borderLine flex items-center justify-between font-mono text-xs">
+<a class="text-limeAccent hover:underline flex items-center gap-1" href="#">
+<span>EXPLORE_INSTALLATION</span>
+<span>↗</span>
+</a>
+<span class="text-textMuted">EXHIBITED @ TECHFEST '24</span>
+</div>
+</div>
+<!-- Project 3: SYNTH_VOX -->
+<div class="rounded-lg bg-surface border border-borderLine p-6 sm:p-8 flex flex-col justify-between hover:border-limeAccent transition-all group">
+<div>
+<div class="flex items-center justify-between font-mono text-xs text-textMuted mb-4">
+<span class="text-limeAccent font-bold">PROJECT_03 // EXPERIMENT</span>
+<span>WEB LAB</span>
+</div>
+<div class="aspect-[16/9] rounded bg-canvas border border-borderLine mb-6 p-6 flex flex-col justify-center items-center text-center relative overflow-hidden">
+<div class="font-display font-bold text-3xl sm:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-limeAccent via-white to-violetAccent tracking-tighter">
+                SYNTH_VOX // 0.9b
+              </div>
+<div class="mt-2 font-mono text-xs text-textMuted">VARIABLE_WEIGHT: 100 → 900 reactive to voice pitch</div>
+<div class="absolute -bottom-6 -right-6 w-24 h-24 rounded-full bg-limeAccent/10 filter blur-xl"></div>
+</div>
+<h3 class="text-xl sm:text-2xl font-display font-bold text-textMain group-hover:text-limeAccent transition-colors">
+              SYNTH_VOX: Neural Typography Engine
+            </h3>
+<p class="text-xs sm:text-sm text-textMuted mt-3 leading-relaxed">
+              Real-time variable font manipulation engine driven by microphone vocal frequency, dynamically warping font optical size, slant, and weight using Next.js and GLSL.
+            </p>
+<div class="mt-5 flex flex-wrap gap-2 font-mono text-[11px]">
+<span class="px-2 py-1 rounded bg-canvas border border-borderLine text-textMuted">Next.js 15</span>
+<span class="px-2 py-1 rounded bg-canvas border border-borderLine text-textMuted">Fon Variabel</span>
+<span class="px-2 py-1 rounded bg-canvas border border-borderLine text-textMuted">GLSL</span>
+<span class="px-2 py-1 rounded bg-canvas border border-borderLine text-textMuted">TensorFlow.js</span>
+</div>
+</div>
+<div class="mt-8 pt-4 border-t border-borderLine flex items-center justify-between font-mono text-xs">
+<a class="text-limeAccent hover:underline flex items-center gap-1" href="#">
+<span>TEST_LIVE_TOOL</span>
+<span>↗</span>
+</a>
+<span class="text-textMuted">NPM // OPEN_SOURCE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ProjectPortfolioSection -->
+<!-- BEGIN: ExpertiseSection -->
+<section class="py-20 sm:py-28 px-4 sm:px-8 border-b border-borderLine" data-purpose="technical-expertise" id="expertise">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-center gap-3 mb-6">
+<span class="font-mono text-xs text-limeAccent uppercase tracking-widest">// 04_CAPABILITIES</span>
+<div class="h-px bg-borderLine flex-1"></div>
+</div>
+<div class="mb-12">
+<h2 class="text-3xl sm:text-5xl font-display font-bold text-textMain tracking-[-0.03em] uppercase">
+          TECH STACK &amp; SPECIALIZATIONS
+        </h2>
+<p class="font-mono text-xs text-textMuted mt-2">
+          Strictly battle-tested tools and frameworks used across our interactive deployments and hardware builds.
+        </p>
+</div>
+<!-- 3 Technical Tables -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Table 1: Code & Engineering -->
+<div class="rounded-lg bg-surface border border-borderLine p-6">
+<div class="flex items-center justify-between pb-4 border-b border-borderLine">
+<h3 class="font-mono text-sm font-bold text-limeAccent uppercase">
+              // 01 Code &amp; Engineering
+            </h3>
+<span class="font-mono text-[10px] text-textMuted">06 CORE</span>
+</div>
+<ul class="divide-y divide-borderLine font-mono text-xs mt-2">
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">Next.js &amp; TypeScript</span>
+<span class="text-textMuted text-[11px]">Web Architecture</span>
+</li>
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">WebGL &amp; Three.js</span>
+<span class="text-limeAccent text-[11px]">3D Graphic Pipelines</span>
+</li>
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">Rust &amp; C++</span>
+<span class="text-textMuted text-[11px]">High-Perf DSP &amp; Audio</span>
+</li>
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">WebSockets &amp; WebRTC</span>
+<span class="text-textMuted text-[11px]">Low-Latency Comms</span>
+</li>
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">Shader GLSL</span>
+<span class="text-limeAccent text-[11px]">GPU Procedural Visuals</span>
+</li>
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">Python &amp; PyTorch</span>
+<span class="text-textMuted text-[11px]">Neural Experimentation</span>
+</li>
+</ul>
+</div>
+<!-- Table 2: Desain & Prototyping -->
+<div class="rounded-lg bg-surface border border-borderLine p-6">
+<div class="flex items-center justify-between pb-4 border-b border-borderLine">
+<h3 class="font-mono text-sm font-bold text-violetAccent uppercase">
+              // 02 Desain &amp; Prototyping
+            </h3>
+<span class="font-mono text-[10px] text-textMuted">05 SUITES</span>
+</div>
+<ul class="divide-y divide-borderLine font-mono text-xs mt-2">
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">Figma Desain Systems</span>
+<span class="text-textMuted text-[11px]">Component Specs</span>
+</li>
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">TouchDesigner</span>
+<span class="text-violetAccent text-[11px]">Node Waktu Nyata Visuals</span>
+</li>
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">Blender 3D</span>
+<span class="text-textMuted text-[11px]">Hard-Surface &amp; Lighting</span>
+</li>
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">Creative Direction</span>
+<span class="text-textMuted text-[11px]">Identity &amp; Editorial</span>
+</li>
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">Generative AI Tooling</span>
+<span class="text-textMuted text-[11px]">Workflow Accelerators</span>
+</li>
+</ul>
+</div>
+<!-- Table 3: Physical & Hardware -->
+<div class="rounded-lg bg-surface border border-borderLine p-6">
+<div class="flex items-center justify-between pb-4 border-b border-borderLine">
+<h3 class="font-mono text-sm font-bold text-limeAccent uppercase">
+              // 03 Fisik &amp; Perangkat Keras
+            </h3>
+<span class="font-mono text-[10px] text-textMuted">05 RIGS</span>
+</div>
+<ul class="divide-y divide-borderLine font-mono text-xs mt-2">
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">ESP32 &amp; Arduino</span>
+<span class="text-limeAccent text-[11px]">Embedded Firmware</span>
+</li>
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">LiDAR &amp; Sensor Arrays</span>
+<span class="text-textMuted text-[11px]">Spasial Tracking</span>
+</li>
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">Pemetaan Proyeksi</span>
+<span class="text-textMuted text-[11px]">Multi-Beamer Kalibrasi</span>
+</li>
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">CNC &amp; Fabrikasi Cepat</span>
+<span class="text-textMuted text-[11px]">Acrylic &amp; Aluminum</span>
+</li>
+<li class="py-3 flex items-center justify-between">
+<span class="text-textMain font-medium">DMX &amp; Addressable LED</span>
+<span class="text-textMuted text-[11px]">Spasial Lighting Rigs</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ExpertiseSection -->
+<!-- BEGIN: ContactSection -->
+<section class="py-20 sm:py-28 px-4 sm:px-8 bg-surface-subtle" data-purpose="contact-terminal" id="contact">
+<div class="max-w-5xl mx-auto">
+<!-- Terminal Frame -->
+<div class="rounded-lg bg-canvas border border-borderLine overflow-hidden shadow-2xl">
+<!-- Terminal Bar -->
+<div class="px-4 py-3 bg-surface border-b border-borderLine flex items-center justify-between font-mono text-xs text-textMuted">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-borderLine"></span>
+<span class="w-3 h-3 rounded-full bg-borderLine"></span>
+<span class="w-3 h-3 rounded-full bg-borderLine"></span>
+<span class="ml-2 text-limeAccent">LAB_DISPATCH_INTERFACE // PORT_8080</span>
+</div>
+<span class="text-[10px] text-textMuted">SSH_ENCRYPTED</span>
+</div>
+<div class="p-6 sm:p-12 space-y-8">
+<div>
+<span class="font-mono text-xs text-limeAccent uppercase tracking-widest">// COLLABORATE_OR_COMMISSION</span>
+<h2 class="text-3xl sm:text-5xl font-display font-bold text-textMain tracking-[-0.03em] uppercase mt-2">
+              PUNYA GAGASAN? <br/>
+<span class="text-limeAccent">WUJUDKAN BERSAMA.</span>
+</h2>
+<p class="mt-4 text-textMuted text-sm sm:text-base max-w-xl leading-relaxed">
+              Kami berkolaborasi dengan peneliti, studio independen, kurator festival, dan rekan kreator. Sampaikan gagasan Anda, baik berupa instalasi interaktif, perangkat kreatif, maupun purwarupa awal.
+            </p>
+</div>
+<!-- Dispatch Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+<a class="p-5 rounded bg-surface border border-borderLine hover:border-limeAccent transition-all group flex flex-col justify-between" href="mailto:hello@collective.lab">
+<span class="font-mono text-[11px] text-textMuted">KOTAK MASUK LANGSUNG // 24H RESPONSE</span>
+<div class="mt-3">
+<span class="text-lg font-mono font-bold text-textMain group-hover:text-limeAccent transition-colors">
+                  hello@collective.lab
+                </span>
+<p class="text-xs text-textMuted mt-1">For commissions, residencies &amp; inquiries</p>
+</div>
+<span class="mt-4 font-mono text-xs text-limeAccent font-bold">SEND TRANSMISSION ↗</span>
+</a>
+<div class="p-5 rounded bg-surface border border-borderLine flex flex-col justify-between">
+<span class="font-mono text-[11px] text-textMuted">UNIVERSITY LAB HOURS</span>
+<div class="mt-3">
+<span class="text-base font-mono font-bold text-textMain">
+                  LAB BUILDING C // RM 402
+                </span>
+<p class="text-xs text-textMuted mt-1">Malam lab terbuka: Tue &amp; Thu (20:00 - late)</p>
+</div>
+<span class="mt-4 font-mono text-xs text-violetAccent">COLD BREW ON TAP ☕</span>
+</div>
+</div>
+<!-- Social Protocols Strip -->
+<div class="pt-6 border-t border-borderLine flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
+<span class="text-textMuted">TEMUKAN KAMI DI INTERNET:</span>
+<div class="flex flex-wrap items-center gap-5">
+<a class="text-textMain hover:text-limeAccent transition-colors" href="https://github.com" target="_blank">GITHUB [gh/collective]</a>
+<a class="text-textMain hover:text-limeAccent transition-colors" href="https://instagram.com" target="_blank">INSTAGRAM [@lab.collective]</a>
+<a class="text-textMain hover:text-limeAccent transition-colors" href="https://discord.com" target="_blank">DISCORD [server/hackers]</a>
+<a class="text-textMain hover:text-limeAccent transition-colors" href="https://linkedin.com" target="_blank">LINKEDIN</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ContactSection -->
+<!-- BEGIN: SiteFooter -->
+<footer class="py-10 px-4 sm:px-8 border-t border-borderLine bg-canvas" data-purpose="site-footer">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 font-mono text-xs text-textMuted">
+<div class="flex items-center gap-3">
+<div class="w-6 h-6 rounded bg-limeAccent text-black flex items-center justify-center font-bold text-[10px]">
+          LAB
+        </div>
+<span class="text-textMain font-bold">[LAB Siswa] // COLLECTIVE</span>
+<span>© 2024–2025</span>
+</div>
+<div class="flex flex-wrap items-center gap-6 text-[11px]">
+<span>BUILT WITH NEXT &amp; TAILWIND</span>
+<span class="text-borderLine">|</span>
+<span class="text-limeAccent font-medium">ZERO CORPORATE SLOP</span>
+<span class="text-borderLine">|</span>
+<span>SEMUA EKSPERIMEN SUMBER TERBUKA</span>
+</div>
+<div class="text-[11px]">
+        DIRANCANG UNTUK WEB INDEPENDEN
+      </div>
+</div>
+</footer>
+<!-- END: SiteFooter -->
+</body></html>
